@@ -1,7 +1,10 @@
-from classtest import PDclass
+from classtest import Car,Automobile
 
-bhai=PDclass()
+bmw=Automobile('true','bmw','180')
 
-c=bhai.sum(3,4)
+bmw.speedintro()
+bmw.autopilotintro()
+bmw.masterintro()
 
-print(c)
+maruti=Car('maruti','120')
+maruti.speedintro()
