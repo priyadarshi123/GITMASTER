@@ -3,11 +3,12 @@ import pandas
 import yfinance as yf
 from ReturnCalc import *
 
-tickers =["AMZN","GOOG"]
+tickers =["AMZN"]
 ohlcv_data={}
 
 def Downloadfromyfinance(ticker,period="1mo",interval="1d"):
     temp = yf.download(ticker, period=period, interval=interval)
+    temp.sort_index()
     temp.dropna(how="any", inplace=True)
     print(temp)
     return temp
@@ -56,7 +57,12 @@ for ticker in tickers:
     CAGR_calculated = CAGR(ohlcv_data[ticker])
     print("CAGR of {} is {}:".format(ticker,CAGR_calculated))
     volatility_calculated = volatility(ohlcv_data[ticker])
+    Sharpe_calculated = Sharpe_ratio(ohlcv_data[ticker], 0.03)
+    Sortino_calculated = Sortino_ratio(ohlcv_data[ticker],0.03)
+
     print("Volatility of {} is: {}".format(ticker,volatility_calculated))
+    print('Sharpe ratio is {}'.format(Sharpe_calculated))
+    print('Sortino ratio is {}'.format(Sortino_calculated))
 
 print("Done...")
 

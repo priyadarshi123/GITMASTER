@@ -1,4 +1,7 @@
 import numpy as np
+import pandas as pd
+
+
 def CAGR(DF):
     df = DF.copy()
     df["return"]=df["Close"].pct_change()
@@ -22,7 +25,10 @@ def Sharpe_ratio(DF,rf=0.03):
 
 def Sortino_ratio(DF,rf=0.03):
     df=DF.copy()
+    CAGR_calc = CAGR(df)
     df['return'] = df['Close'].pct_change()
-    net_return = np.where(df["return"]>0,0,df["return"])
-    neg_vol= neg_return[neg_return!=0].std()
+    neg_return = np.where(df["return"]>0,0,df["return"])
+    neg_vol= pd.Series(neg_return[neg_return!=0]).std() ** np.sqrt(252)
+    print("neg_vol is: {}",format(neg_vol))
+    return (CAGR_calc - rf)/neg_vol
 
