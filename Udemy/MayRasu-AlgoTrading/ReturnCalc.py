@@ -15,3 +15,14 @@ def volatility(DF):
     vol = df['dailychange'].std() * np.sqrt(252)
     return vol
 
+def Sharpe_ratio(DF,rf=0.03):
+    df=DF.copy()
+    return ((CAGR(df)-0.03)/volatility(df))
+
+
+def Sortino_ratio(DF,rf=0.03):
+    df=DF.copy()
+    df['return'] = df['Close'].pct_change()
+    net_return = np.where(df["return"]>0,0,df["return"])
+    neg_vol= neg_return[neg_return!=0].std()
+
