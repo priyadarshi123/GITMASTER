@@ -1,9 +1,16 @@
 import pandas
 
 import yfinance as yf
+from ReturnCalc import *
 
-tickers =["AMZN"]
+tickers =["AMZN","GOOG"]
 ohlcv_data={}
+
+def Downloadfromyfinance(ticker,period="1mo",interval="1d"):
+    temp = yf.download(ticker, period=period, interval=interval)
+    temp.dropna(how="any", inplace=True)
+    print(temp)
+    return temp
 
 def MACD(DF,fast=12,slow=26,sig=9):
     df=DF.copy()
@@ -25,21 +32,34 @@ def ATR(DF,n=14):
     return df['ATR']
 
 
+
 def BollingerBand(DF,n=14):
     df = DF.copy()
-
-
-
-for ticker in  tickers:
-    temp = yf.download(ticker,period="1mo",interval="15m")
-    temp.dropna(how="any",inplace=True)
-    ohlcv_data[ticker] = temp
+    df = df.sort_index()
+    df['MB'] = df['Close'].rolling(n).mean().squeeze()
+    df['UB'] = df['MB'] + 2*df['Close'].rolling(n).std(ddof=0).squeeze()
+    df['LB'] = df['MB'] - 2*df['Close'].rolling(n).std(ddof=0).squeeze()
+    df['BB_WIDTH'] = df['UB'] - df['LB']
+    return df[['MB','UB','LB','BB_WIDTH']]
+'''
+for ticker in tickers:
+    ohlcv_data[ticker] = Downloadfromyfinance(ticker,"1mo","15m")
     ohlcv_data[ticker][["macd","macd_signal"]]=MACD(ohlcv_data[ticker])
     ohlcv_data[ticker]['ATR'] = ATR(ohlcv_data[ticker])
+    ohlcv_data[ticker][['MB','UB','LB','BB_WIDTH']] = BollingerBand(ohlcv_data[ticker],20)
+    print(ohlcv_data["AMZN"][["macd","macd_signal","ATR",'MB','UB','LB','BB_WIDTH']])
+'''
 
-
-print(ohlcv_data["AMZN"][["macd","macd_signal","ATR"]])
-
+for ticker in tickers:
+    print("Calculating for:" + ticker)
+    ohlcv_data[ticker] = Downloadfromyfinance(ticker,"1mo","1d")
+    CAGR_calculated = CAGR(ohlcv_data[ticker])
+    print("CAGR of {} is {}:".format(ticker,CAGR_calculated))
+    volatility_calculated = volatility(ohlcv_data[ticker])
+    print("Volatility of {} is: {}".format(ticker,volatility_calculated))
 
 print("Done...")
+
+
+
 
