@@ -1,3 +1,5 @@
 .ignore
 .idea/
 __pycache__/
+/.venv3.11/
+/.venv/

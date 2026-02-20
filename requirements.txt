@@ -3,3 +3,7 @@ requests
 flask
 pandas
 yfinance
+pandas_datareader
+streamlit
+dotenv
+os
