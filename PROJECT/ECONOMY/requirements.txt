@@ -6,4 +6,3 @@ yfinance
 pandas_datareader
 streamlit
 dotenv
-os
