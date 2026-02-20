@@ -6,3 +6,4 @@ yfinance
 pandas_datareader
 streamlit
 dotenv
+fredapi
