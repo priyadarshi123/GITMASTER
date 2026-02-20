@@ -7,3 +7,4 @@ pandas_datareader
 streamlit
 dotenv
 fredapi
+plotly
