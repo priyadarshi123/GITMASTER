@@ -9,9 +9,22 @@ st.set_page_config(page_title="Macro Dashboard", layout="wide")
 st.title("🌍 Global Macro Dashboard")
 st.markdown("### Market Snapshot")
 
-@st.cache_data(ttl=3600)  # 3600 sec = 1 hour
+@st.cache_data(ttl=3600)
 def load_data(ticker):
-    return yf.download(ticker, period="1y", interval="1d")
+    data = yf.download(
+        ticker,
+        period="1y",
+        interval="1d",
+        auto_adjust=True,
+        progress=False
+    )
+    return data
+
+
+def latest_close(df):
+    if df is None or df.empty:
+        return "No data"
+    return round(df["Close"].iloc[-1], 2)
 
 
 # --- S&P500 ---
@@ -21,9 +34,9 @@ vix = load_data("^VIX")   #VIX Level - Below 15 - Very calm, 15–20 - Normal, 2
 
 col1,col2,col3 = st.columns(3)
 
-col1.metric("S&P 500", round(sp500["Close"].iloc[-1], 2))
-col2.metric("Nasdaq", round(nasdaq["Close"].iloc[-1], 2))
-col3.metric("VIX", round(vix["Close"].iloc[-1], 2))
+col1.metric("S&P 500", latest_close(sp500))
+col2.metric("Nasdaq", latest_close(nasdaq))
+col3.metric("VIX", latest_close(vix))
 
 st.markdown("---")
 #st.markdown("Use the sidebar to navigate dashboards.")
