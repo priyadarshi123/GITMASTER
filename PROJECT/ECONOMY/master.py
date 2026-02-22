@@ -1,29 +1,30 @@
 import os
-
 import streamlit as st
 import yfinance as yf
-from fredapi import Fred
 import pandas as pd
 from dotenv import load_dotenv
 
-load_dotenv()
+st.set_page_config(page_title="Macro Dashboard", layout="wide")
 
-fred_api_key=os.getenv('FRED_API_KEY')
+st.title("🌍 Global Macro Dashboard")
+st.markdown("### Market Snapshot")
 
+@st.cache_data(ttl=3600)  # 3600 sec = 1 hour
+def load_data(ticker):
+    return yf.download(ticker, period="1y", interval="1d")
 
-st.title("S&P500 vs Chicago PMI")
 
 # --- S&P500 ---
-sp500 = yf.download("^GSPC",
-                    start="2010-01-01",
-                    end="2020-12-31")
+sp500 = load_data("^GSPC") # S&P 500 - Large US companies (all sectors)
+nasdaq = load_data("^IXIC") #NASDAQ Composite - Tech-heavy growth stocks
+vix = load_data("^VIX")   #VIX Level - Below 15 - Very calm, 15–20 - Normal, 20–30 - Rising fear,
 
-# --- Chicago PMI ---
-fred = Fred(api_key=fred_api_key)
+col1,col2,col3 = st.columns(3)
 
-pmi = fred.get_series("INDPRO")
-pmi = pmi.loc["2010-01-01":"2020-12-31"]
-pmi = pd.DataFrame(pmi, columns=["PMI"])
+col1.metric("S&P 500", round(sp500["Close"].iloc[-1], 2))
+col2.metric("Nasdaq", round(nasdaq["Close"].iloc[-1], 2))
+col3.metric("VIX", round(vix["Close"].iloc[-1], 2))
 
-st.write(sp500.tail())
-st.write(pmi.tail())
+st.markdown("---")
+#st.markdown("Use the sidebar to navigate dashboards.")
+
