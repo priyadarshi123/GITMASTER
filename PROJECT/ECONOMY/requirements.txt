@@ -9,3 +9,4 @@ dotenv
 fredapi
 plotly
 ibapi
+ib_async
