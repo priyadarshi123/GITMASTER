@@ -1,45 +1,174 @@
-import os
 import streamlit as st
 import yfinance as yf
 import pandas as pd
-from dotenv import load_dotenv
+import plotly.express as px
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 
+#Market tickers
+MARKETS = {
 
-st.set_page_config(page_title="Macro Dashboard", layout="wide")
+    "Equities": {
+        "S&P 500 (US)": "^GSPC",
+        "NASDAQ (US)": "^IXIC",
+        "Nikkei (Japan)": "^N225",
+        "Hang Seng (HK)": "^HSI",
+        "Sensex (India)": "^BSESN",
+        "FTSE (UK)": "^FTSE"
+    },
 
-st.title("🌍 Global Macro Dashboard")
-st.markdown("### Market Snapshot")
+    "Commodities": {
+        "Gold": "GC=F",
+        "Oil": "CL=F"
+    },
+
+    "Crypto": {
+        "Bitcoin": "BTC-USD"
+    }
+}
 
 @st.cache_data(ttl=3600)
-def load_data(ticker):
-    data = yf.download(
-        ticker,
-        period="1y",
-        interval="1d",
-        auto_adjust=True,
-        progress=False
-    )
+def download_all_markets():
+    #if period == "1d":
+    #    data = yf.download(ticker, period="2d", interval="1d", progress=False)
+    #else:
+    #    data = yf.download(ticker, period=period, progress=False)
+    tickers = [t for cat in MARKETS.values() for t in cat.values()]
+    data = yf.download(tickers, period="1y",interval="1d", progress=False)
+
     return data
 
 
-def latest_close(df):
-    if df is None or df.empty:
-        return "No data"
-    return round(df["Close"].iloc[-1], 2)
+def calculate_return(data, period):
+
+    if period == "1d":
+        start = data["Close"].iloc[-2].item()
+
+    elif period == "1mo":
+        start = data["Close"].iloc[-22].item()
+
+    elif period == "6mo":
+        start = data["Close"].iloc[-126].item()
+
+    elif period == "1y":
+        start = data["Close"].iloc[0].item()
+
+    end = data["Close"].iloc[-1].item()
+
+    return ((end / start) - 1) * 100
+
+def momentum_signal(series):
+
+    series = series.dropna()
+
+    if len(series) < 50:
+        return "⚪ No Data"
+
+    ma20 = series.rolling(20).mean().iloc[-1]
+    ma50 = series.rolling(50).mean().iloc[-1]
+    price = series.iloc[-1]
+
+    if price > ma20 > ma50:
+        return "🟢 Bullish"
+
+    elif price < ma20 < ma50:
+        return "🔴 Bearish"
+
+    else:
+        return "🟡 Neutral"
+
+def load_all_data(all_data, period="1y"):
+
+    rows = []
+
+    for category, markets in MARKETS.items():
+
+        for name, ticker in markets.items():
+
+            series = all_data["Close"][ticker].dropna()
+
+            if len(series) == 0:
+                continue
+
+            signal = momentum_signal(series)
+
+            if period == "1d":
+                start = series.iloc[-2]
+
+            elif period == "1mo":
+                start = series.iloc[-22]
+
+            elif period == "1y":
+                start = series.iloc[0]
+
+            end = series.iloc[-1]
+
+            ret = ((end / start) - 1) * 100
+
+            rows.append({
+                "Category": category,
+                "Market": name,
+                "Return %": ret,
+                "Momentum Signal": signal
+            })
+
+    return rows
 
 
-# --- S&P500 ---
-sp500 = load_data("^GSPC") # S&P 500 - Large US companies (all sectors)
-nasdaq = load_data("^IXIC") #NASDAQ Composite - Tech-heavy growth stocks
-vix = load_data("^VIX")   #VIX Level - Below 15 - Very calm, 15–20 - Normal, 20–30 - Rising fear,
+#st.title("Global Stock Markets")
 
-col1,col2,col3 = st.columns(3)
+period = st.selectbox(
+    "Select Duration",
+    [ "1d" ,"1mo", "1y",]
+)
 
-col1.metric("S&P 500", latest_close(sp500))
-col2.metric("Nasdaq", latest_close(nasdaq))
-col3.metric("VIX", latest_close(vix))
+all_data = download_all_markets()
 
-st.markdown("---")
-#st.markdown("Use the sidebar to navigate dashboards.")
+tab1 , tab2, tab3, tab4 = st.tabs(["Global Dashboard", "Technical", "AI Analytics", "Charts"])
 
+with tab1:
+    st.title("Global Stock Market Performance")
+    Tickers_return_data = load_all_data(all_data,period)
+    hist_compare = pd.DataFrame(Tickers_return_data)
+    # sort markets
+    hist_compare = hist_compare.sort_values("Return %")
+    fig = px.bar(
+        hist_compare,
+        x="Market",
+        y="Return %",
+        color="Return %",
+        color_continuous_scale="RdYlGn",
+        color_continuous_midpoint=0,
+        text="Return %"
+    )
+
+    fig.update_traces(texttemplate='%{text:.2f}%')
+    st.plotly_chart(fig, use_container_width=True)
+
+
+with tab2:
+
+    Tickers_analysis_data = load_all_data(all_data,period)
+    Tech_analysis = pd.DataFrame(Tickers_analysis_data)
+    st.title("Global Stock Market Performance")
+
+    st.subheader("Market Momentum Signals")
+    st.dataframe(Tech_analysis)
+
+with tab3:
+    st.title("AI Analytics")
+
+
+with tab4:
+    st.title("Charts")
+    tab4, tab5, tab6 = st.tabs(["Employment numbers", "Interest rate", "PMI"])
+
+    with tab4:
+        st.title("Employment numbers")
+
+    with tab5:
+        st.title("Interest rate")
+
+    with tab6:
+        st.title("PMI")
