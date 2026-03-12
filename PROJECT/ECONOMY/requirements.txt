@@ -11,3 +11,4 @@ plotly
 ibapi
 ib_async
 openai
+matplotlib
