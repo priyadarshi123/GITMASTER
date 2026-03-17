@@ -6,6 +6,7 @@ import numpy as np
 from openai import OpenAI
 import matplotlib.pyplot as plt
 from fredapi import Fred
+import matplotlib.ticker as mtick
 
 
 @st.cache_data(ttl=3600, show_spinner="Downloading market data...")
@@ -279,6 +280,8 @@ def plot_yield_curve(date,yields):
     fig, ax = plt.subplots(figsize=(12, 6))
 
     ax.plot(maturities, yields.loc[date], marker='D', label='Yield Curve at ' + date)
+
+    ax.yaxis.set_major_formatter(mtick.FormatStrFormatter('%.2f%%'))
 
     ax.set_xlabel('Date')
     ax.set_ylabel('Yield')
