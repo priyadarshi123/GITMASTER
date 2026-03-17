@@ -273,7 +273,7 @@ def get_yield_data(observation_start,observation_end):
     yields.index.name = "Date"
     return yields
 
-@st.cache_data(ttl=3600)
+
 def plot_yield_curve(date,yields):
     maturities = ['1M', '3M', '6M', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '20Y', '30Y']  # Maturities
 
@@ -290,7 +290,7 @@ def plot_yield_curve(date,yields):
     ax.legend(loc = [0.69, 0.14])
     ax.grid(True)
 
-    return fig
+    st.pyplot(fig)
 
 
 
