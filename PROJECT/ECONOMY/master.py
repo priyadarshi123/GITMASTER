@@ -7,8 +7,11 @@ from dateutil.relativedelta import relativedelta
 import numpy as np
 from openai import OpenAI
 from dotenv import load_dotenv
+from fredapi import Fred
 import os
 from my_functions import *
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 load_dotenv()
 
@@ -39,19 +42,51 @@ MARKETS = {
 
 #st.title("Global Stock Markets")
 
-period = st.select_slider(
-    "Select Duration",
-    options=["1d", "1wk", "1mo", "3mo", "6mo", "1y", "2y", "3y"],
-    value="1mo"
-)
+
 
 all_data = download_all_markets(MARKETS)
 
-tab1 , tab2, tab3, tab4 = st.tabs(["Global Dashboard", "Technical", "AI Analytics", "Charts"])
+tab1 , tab2, tab3, tab4, tab5 = st.tabs(["Global Dashboard", "Technical", "AI Analytics", "Charts", "Bond Market"])
 
 with tab1:
+
+    spx=all_data["Close"]["^GSPC"]
+    nasdaq=all_data["Close"]["^IXIC"]
+
+    spx_last = spx.iloc[-1]
+    spx_prev = spx.iloc[-2]
+    nasdaq_last = nasdaq.iloc[-1]
+    nasdaq_prev = nasdaq.iloc[-2]
+    spx_change = ((spx_last / spx_prev) - 1) * 100
+    nasdaq_change = ((nasdaq_last / nasdaq_prev) - 1) * 100
+
+    col1, col2 = st.columns(2)
+    #Show S&P500 latest close
+    col1.metric(
+        "S&P 500",
+        f"{spx_last:,.0f}",
+        f"{spx_change:.2f}%",
+        delta_color="normal"
+    )
+
+    col2.metric(
+        "NASDAQ",
+        f"{nasdaq_last:,.0f}",
+        f"{nasdaq_change:.2f}%",
+        delta_color = "normal"
+    )
+
+    st.markdown("---")
+
+
+    period = st.select_slider(
+        "Select Duration",
+        options=["1d", "1wk", "1mo", "3mo", "6mo", "1y", "2y", "3y"],
+        value="1mo"
+    )
+
+    market_data = load_all_data(all_data, MARKETS, period)
     st.title("Global Stock Market Performance")
-    market_data = load_all_data(all_data,MARKETS, period)
     hist_compare = pd.DataFrame(market_data)
     # sort markets
     hist_compare = hist_compare.sort_values("Return %")
@@ -71,13 +106,12 @@ with tab1:
 
 
 with tab2:
-
-    Tickers_analysis_data = load_all_data(all_data, MARKETS, period)
-    Tech_analysis = pd.DataFrame(market_data)
+    period2="3y"
+    Tickers_analysis_data = load_all_data(all_data, MARKETS, period2)
+    Tech_analysis = pd.DataFrame(Tickers_analysis_data)
     st.title("Global Stock Market Performance")
 
     st.subheader("Market Momentum Signals")
-    print(Tech_analysis)
     st.dataframe(Tech_analysis,hide_index=True)
 
 with tab3:
@@ -107,13 +141,49 @@ with tab3:
 
 with tab4:
     st.title("Charts")
-    tab4, tab5, tab6 = st.tabs(["Employment numbers", "Interest rate", "PMI"])
+    tab11, tab12, tab13 = st.tabs(["Employment numbers", "Interest rate", "PMI"])
 
-    with tab4:
+    with tab11:
         st.title("Employment numbers")
 
-    with tab5:
+    with tab12:
         st.title("Interest rate")
 
-    with tab6:
+    with tab13:
         st.title("PMI")
+
+with tab5:
+    st.title("Bond market Stats")
+    #Download data  until 2025 from file
+    data_hist = pd.read_csv(r'datasource\fred_yields.csv', index_col="Date",parse_dates=True)
+    print("data_hist: ", data_hist)
+
+    #Download data from 2026 using api call
+    current_date = str(datetime.now().date())
+    print(current_date)
+    data_current = get_yield_data(observation_start='2026-01-01',observation_end = current_date)
+
+    print("data_current: ", data_current)
+
+
+    #Combine both data and datahist dataframe in to one dataframe
+
+    data = pd.concat([data_hist, data_current])
+    data = data.sort_index()
+    data = data[~data.index.duplicated()]
+
+
+    st.subheader("US Treasury Yields")
+    fig, ax = plt.subplots(figsize=(10,5))
+    for col in data.columns:
+        ax.plot(data.index, data[col], label=col)
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Yield (%)")
+    ax.legend()
+    ax.grid(alpha=0.3)
+    st.pyplot(fig)
+    latest_date = data.dropna(how='all').index[-1]
+
+    fig2 = plot_yield_curve(str(latest_date.date()), data)
+
+    st.pyplot(fig2)

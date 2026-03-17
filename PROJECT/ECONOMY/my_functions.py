@@ -5,16 +5,28 @@ import yfinance as yf
 import numpy as np
 from openai import OpenAI
 import matplotlib.pyplot as plt
+from fredapi import Fred
 
-@st.cache_data(ttl=3600)
+
+@st.cache_data(ttl=3600, show_spinner="Downloading market data...")
 def download_all_markets(markets_all):
     # if period == "1d":
     #    data = yf.download(ticker, period="2d", interval="1d", progress=False)
     # else:
     #    data = yf.download(ticker, period=period, progress=False)
+    print("Downloading market data...")
     tickers = [t for cat in markets_all.values() for t in cat.values()]
-    data = yf.download(tickers, period="3y", interval="1d", progress=False)
+    data = yf.download(
+        tickers,
+        period="3y",
+        interval="1d",
+        progress=False,
+        auto_adjust=True,
+        threads=True
+    )
+
     data = data.ffill().bfill()
+    print(data.head())
 
     return data
 
@@ -123,10 +135,10 @@ def calculate_metrics(series, period):
 
 def load_all_data(all_data, markets_all, period="1y"):
     rows = []
-
+    print("Loading data...")
     for category, market in markets_all.items():
         for name, ticker in market.items():
-            series = all_data["Close"][ticker].dropna()
+            series = all_data["Close"][ticker]
             if len(series) == 0:
                 continue
             ret, mom_signal, rsi_signal, market_regime_signal  = calculate_metrics(series, period)
@@ -138,6 +150,7 @@ def load_all_data(all_data, markets_all, period="1y"):
                 "RSI Signal": rsi_signal,
                 "Market Regime Signal": market_regime_signal
             })
+    print(rows)
     return rows
 
 
@@ -218,10 +231,7 @@ def line_graph(hist_compare_local, period):
 
     hist_compare_local = hist_compare_local.div(hist_compare_local.iloc[0]) * 100
 
-
-    hist_compare_local = hist_compare_local.div(hist_compare_local.iloc[0]) * 100
     fig, ax = plt.subplots(figsize=(10,5))
-
     ax.plot(hist_compare_local["^BSESN"], label="SENSEX India")
     ax.plot(hist_compare_local["^FTSE"], label="FTSE UK")
     ax.plot(hist_compare_local["^GSPC"], label="S&P500")
@@ -236,4 +246,53 @@ def line_graph(hist_compare_local, period):
     ax.legend()
 
     st.pyplot(fig)
+
+@st.cache_data(ttl=3600)
+def get_yield_data(observation_start,observation_end):
+    series_ids = {
+        "1M": "DGS1MO",
+        "3M": "DGS3MO",
+        "6M": "DGS6MO",
+        "1Y": "DGS1",
+        "2Y": "DGS2",
+        "3Y": "DGS3",
+        "5Y": "DGS5",
+        "7Y": "DGS7",
+        "10Y": "DGS10",
+        "20Y": "DGS20",
+        "30Y": "DGS30"
+    }
+    data = {}
+    fred = Fred(api_key=os.getenv('FRED_API_KEY'))
+    for tenor, Fredcode in series_ids.items():
+        data[tenor] = fred.get_series(Fredcode, observation_start, observation_end)
+        print(f"{Fredcode} in progress")
+
+    yields=pd.DataFrame(data)
+    yields.index.name = "Date"
+    return yields
+
+@st.cache_data(ttl=3600)
+def plot_yield_curve(date,yields):
+    maturities = ['1M', '3M', '6M', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '20Y', '30Y']  # Maturities
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+
+    ax.plot(maturities, yields.loc[date], marker='D', label='Yield Curve at ' + date)
+
+    ax.set_xlabel('Date')
+    ax.set_ylabel('Yield')
+    ax.set_title('Yield Curve at ' + date)
+
+    ax.legend(loc = [0.69, 0.14])
+    ax.grid(True)
+
+    return fig
+
+
+
+
+
+
+
 
