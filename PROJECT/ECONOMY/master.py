@@ -188,6 +188,6 @@ with tab5:
     st.pyplot(fig)
     latest_date = data.dropna(how='all').index[-1]
 
-    fig2 = plot_yield_curve(str(latest_date.date()), data)
+    plot_yield_curve(str(latest_date.date()), data)
 
-    st.pyplot(fig2)
+
