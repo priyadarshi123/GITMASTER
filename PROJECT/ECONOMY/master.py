@@ -12,9 +12,13 @@ import os
 from my_functions import *
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+from pathlib import Path
 load_dotenv()
 
+BASE_DIR = Path(__file__).resolve().parent
+DATA_FILE = BASE_DIR / "datasource" / "fred_yields.csv"
+print(DATA_FILE)
+data = pd.read_csv(DATA_FILE)
 #Market tickers
 MARKETS = {
 
@@ -155,7 +159,7 @@ with tab4:
 with tab5:
     st.title("Bond market Stats")
     #Download data  until 2025 from file
-    data_hist = pd.read_csv(r'datasource\fred_yields.csv', index_col="Date",parse_dates=True)
+    data_hist = pd.read_csv(DATA_FILE, index_col="Date",parse_dates=True)
     print("data_hist: ", data_hist)
 
     #Download data from 2026 using api call
