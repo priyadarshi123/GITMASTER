@@ -106,6 +106,11 @@ def market_regime(series):
 def calculate_metrics(series, period):
     series = series.dropna()
 
+    series = series.dropna()
+
+    if len(series) < 2:
+        return np.nan, "⚪ No Data", "⚪ No Data", "⚪ No Data"
+
     period_days = {
         "1d": 2,
         "1wk": 5,
@@ -119,10 +124,8 @@ def calculate_metrics(series, period):
 
     lookback = period_days.get(period, 22)
 
-    if len(series) > lookback:
-        start = series.iloc[-lookback]
-    else:
-        start = series.iloc[0]
+    lookback = min(lookback, len(series) - 1)
+    start = series.iloc[-lookback]
 
     end = series.iloc[-1]
 
@@ -136,12 +139,13 @@ def calculate_metrics(series, period):
 
 def load_all_data(all_data, markets_all, period="1y"):
     rows = []
-    print("Loading data...")
+    #print("Loading data...")
     for category, market in markets_all.items():
         for name, ticker in market.items():
-            series = all_data["Close"][ticker]
-            if len(series) == 0:
+            series = all_data["Close"].get(ticker)
+            if series is None or len(series.dropna()) < 2:
                 continue
+
             ret, mom_signal, rsi_signal, market_regime_signal  = calculate_metrics(series, period)
             rows.append({
                 "Category": category,
@@ -151,7 +155,7 @@ def load_all_data(all_data, markets_all, period="1y"):
                 "RSI Signal": rsi_signal,
                 "Market Regime Signal": market_regime_signal
             })
-    print(rows)
+    #print(rows)
     return rows
 
 
