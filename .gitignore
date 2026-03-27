@@ -7,3 +7,4 @@ __pycache__/
 /JUPYTER_NOTEBOOK/.ipynb_checkpoints/CourseraPortfolioConstruction-checkpoint.ipynb
 PROJECT/ECONOMY/.env
 .env
+AGENTS.md
