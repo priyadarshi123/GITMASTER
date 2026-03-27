@@ -6,3 +6,4 @@ __pycache__/
 /.ipynb_checkpoints/CourseraPortfolioConstruction-checkpoint.ipynb
 /JUPYTER_NOTEBOOK/.ipynb_checkpoints/CourseraPortfolioConstruction-checkpoint.ipynb
 PROJECT/ECONOMY/.env
+.env
