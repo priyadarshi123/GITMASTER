@@ -8,8 +8,6 @@ streamlit
 dotenv
 fredapi
 plotly
-ibapi
-ib_async
 openai
 seaborn
 matplotlib

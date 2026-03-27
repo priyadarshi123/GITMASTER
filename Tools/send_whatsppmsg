@@ -1,0 +1,3 @@
+import pywhatkit
+
+pywhatkit.sendwhatmsg("+6583633931", "Stock alert triggered!", 14, 30)
