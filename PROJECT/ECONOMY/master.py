@@ -1,193 +1,220 @@
 import streamlit as st
-import yfinance as yf
 import pandas as pd
 import plotly.express as px
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
 import numpy as np
-from openai import OpenAI
-from dotenv import load_dotenv
-from fredapi import Fred
-import os
 from my_functions import *
-import matplotlib.pyplot as plt
-import seaborn as sns
-from pathlib import Path
+from fredapi import Fred
+from dotenv import load_dotenv
+import os
+
+st.set_page_config(layout="wide")
+
+# -----------------------------
+# ENV
+# -----------------------------
 load_dotenv()
+fred_api_key = os.getenv('FRED_API_KEY')
 
-BASE_DIR = Path(__file__).resolve().parent
-DATA_FILE = BASE_DIR / "datasource" / "fred_yields.csv"
-print(DATA_FILE)
-data = pd.read_csv(DATA_FILE)
-#Market tickers
+if not fred_api_key:
+    st.error("FRED API Key not found!")
+    st.stop()
+
+fred = Fred(api_key=fred_api_key)
+
+# -----------------------------
+# HEADER
+# -----------------------------
+st.title("🌍 Global Macro Dashboard")
+
+if st.button("🔄 Refresh Data"):
+    st.cache_data.clear()
+
+# -----------------------------
+# LOAD DATA
+# -----------------------------
 MARKETS = {
-
     "Equities": {
-        "S&P 500 (US)": "^GSPC",
-        "NASDAQ (US)": "^IXIC",
-        "Nikkei (Japan)": "^N225",
-        "Hang Seng (HK)": "^HSI",
-        "Sensex (India)": "^BSESN",
-        "FTSE (UK)": "^FTSE",
-        "STI Singapore": "^STI"
+        "S&P 500": "^GSPC",
+        "NASDAQ": "^IXIC",
+        "Nikkei": "^N225",
+        "Hang Seng": "^HSI",
+        "Sensex": "^BSESN",
+        "FTSE": "^FTSE",
+        "STI": "^STI"
     },
-
     "Commodities": {
         "Gold": "GC=F",
         "Oil": "CL=F"
     },
-
     "Crypto": {
         "Bitcoin": "BTC-USD"
     }
 }
 
-
-
-#st.title("Global Stock Markets")
-
-
-
 all_data = download_all_markets(MARKETS)
 
-tab1 , tab2, tab3, tab4, tab5 = st.tabs(["Global Dashboard", "Technical", "AI Analytics", "Charts", "Bond Market"])
+# -----------------------------
+# KPI ROW
+# -----------------------------
+st.subheader("📊 Market Snapshot")
 
+def calc_metric(series):
+    last = series.iloc[-1]
+    prev = series.iloc[-2]
+    change = ((last / prev) - 1) * 100
+    return last, change
+
+spx = all_data["Close"]["^GSPC"]
+nasdaq = all_data["Close"]["^IXIC"]
+gold = all_data["Close"]["GC=F"]
+btc = all_data["Close"]["BTC-USD"]
+
+col1, col2, col3, col4 = st.columns(4)
+
+for col, (name, series) in zip(
+    [col1, col2, col3, col4],
+    [("S&P 500", spx), ("NASDAQ", nasdaq), ("Gold", gold), ("Bitcoin", btc)]
+):
+    last, change = calc_metric(series)
+    col.metric(name, f"{last:,.0f}", f"{change:.2f}%")
+
+# -----------------------------
+# SIDEBAR
+# -----------------------------
+with st.sidebar:
+    st.header("⚙️ Controls")
+    period = st.selectbox("Select Period", ["1mo", "3mo", "6mo", "1y", "3y"], index=3)
+
+# -----------------------------
+# TABS
+# -----------------------------
+tab1, tab2, tab3, tab4 = st.tabs(
+    ["📈 Overview", "💼 Portfolio", "🌍 Macro", "🤖 AI Insights"]
+)
+
+# -----------------------------
+# OVERVIEW TAB
+# -----------------------------
 with tab1:
-
-    spx=all_data["Close"]["^GSPC"]
-    nasdaq=all_data["Close"]["^IXIC"]
-
-    spx_last = spx.iloc[-1]
-    spx_prev = spx.iloc[-2]
-    nasdaq_last = nasdaq.iloc[-1]
-    nasdaq_prev = nasdaq.iloc[-2]
-    spx_change = ((spx_last / spx_prev) - 1) * 100
-    nasdaq_change = ((nasdaq_last / nasdaq_prev) - 1) * 100
-
-    col1, col2 = st.columns(2)
-    #Show S&P500 latest close
-    col1.metric(
-        "S&P 500",
-        f"{spx_last:,.0f}",
-        f"{spx_change:.2f}%",
-        delta_color="normal"
-    )
-
-    col2.metric(
-        "NASDAQ",
-        f"{nasdaq_last:,.0f}",
-        f"{nasdaq_change:.2f}%",
-        delta_color = "normal"
-    )
-
-    st.markdown("---")
-
-
-    period = st.select_slider(
-        "Select Duration",
-        options=["1d", "1wk", "1mo", "3mo", "6mo", "1y", "2y", "3y"],
-        value="1mo"
-    )
+    st.subheader("Market Performance")
 
     market_data = load_all_data(all_data, MARKETS, period)
-    st.title("Global Stock Market Performance")
-    hist_compare = pd.DataFrame(market_data)
-    # sort markets
-    hist_compare = hist_compare.sort_values("Return %")
+    df = pd.DataFrame(market_data)
+
     fig = px.bar(
-        hist_compare,
+        df,
         x="Market",
         y="Return %",
         color="Return %",
-        color_continuous_scale="RdYlGn",
-        color_continuous_midpoint=0,
-        text="Return %"
+        color_continuous_scale="RdYlGn"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("Growth of $100 Investment")
+
+    prices = all_data["Close"]
+    prices = prices / prices.iloc[0] * 100
+
+    fig2 = px.line(prices)
+    st.plotly_chart(fig2, use_container_width=True)
+
+# -----------------------------
+# PORTFOLIO TAB
+# -----------------------------
+with tab2:
+    st.subheader("Portfolio Analysis")
+
+    tickers = st.text_input("Tickers (comma separated)", "AAPL,MSFT,GOOG")
+    weights = st.text_input("Weights (comma separated)", "0.3,0.3,0.4")
+
+    if st.button("Analyze Portfolio"):
+        tickers_list = [t.strip() for t in tickers.split(",")]
+        weights_list = np.array([float(w) for w in weights.split(",")])
+
+        if len(tickers_list) != len(weights_list):
+            st.error("Tickers and weights must match!")
+            st.stop()
+
+        data = download_all_markets({"P": {t: t for t in tickers_list}})
+        returns = data["Close"].pct_change().dropna()
+
+        port_ret = (returns.mean() * weights_list).sum() * 252
+        port_vol = np.sqrt(np.dot(weights_list.T, np.dot(returns.cov() * 252, weights_list)))
+        sharpe = port_ret / port_vol
+
+        col1, col2, col3 = st.columns(3)
+        col1.metric("Return", f"{port_ret:.2%}")
+        col2.metric("Volatility", f"{port_vol:.2%}")
+        col3.metric("Sharpe Ratio", f"{sharpe:.2f}")
+
+# -----------------------------
+# MACRO TAB
+# -----------------------------
+with tab3:
+    st.subheader("🌍 Macro Dashboard")
+
+    subtab1, subtab2, subtab3 = st.tabs(
+        ["⚠️ Recession", "🇺🇸 Economy", "🌍 PMI"]
     )
 
-    fig.update_traces(texttemplate='%{text:.2f}%')
-    st.plotly_chart(fig, use_container_width=True)
-    line_graph(all_data["Close"], period)
+    # ---------- RECESSION ----------
+    with subtab1:
+        st.subheader("Yield Curve (10Y–2Y Spread)")
 
+        spread = fred.get_series("T10Y2Y")
 
-with tab2:
-    period2="3y"
-    Tickers_analysis_data = load_all_data(all_data, MARKETS, period2)
-    Tech_analysis = pd.DataFrame(Tickers_analysis_data)
-    st.title("Global Stock Market Performance")
+        fig = px.line(spread, title="10Y - 2Y Spread")
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.subheader("Market Momentum Signals")
-    st.dataframe(Tech_analysis,hide_index=True)
+        if spread.iloc[-1] < 0:
+            st.error("🔴 Yield Curve Inverted → Recession Risk HIGH")
+        else:
+            st.success("🟢 Yield Curve Normal")
 
-with tab3:
+    # ---------- ECONOMY ----------
+    with subtab2:
+        indicator_map = {
+            "Unemployment Rate": "UNRATE",
+            "CPI": "CPIAUCSL",
+            "Core CPI": "CPILFESL",
+            "Industrial Production": "INDPRO"
+        }
 
-    st.title("AI Market Commentary")
+        selected = st.selectbox("Select Indicator", list(indicator_map.keys()))
+
+        data = fred.get_series(indicator_map[selected])
+
+        fig = px.line(
+            x=data.index,
+            y=data.values,
+            title=selected
+        )
+
+        st.plotly_chart(fig, use_container_width=True)
+
+    # ---------- PMI ----------
+    with subtab3:
+        st.subheader("US Manufacturing PMI")
+
+        pmi = fred.get_series("IPMAN")
+
+        fig = px.line(pmi, title="PMI")
+        st.plotly_chart(fig, use_container_width=True)
+
+# -----------------------------
+# AI TAB
+# -----------------------------
+with tab4:
+    st.subheader("🤖 AI Market Commentary")
 
     df = pd.DataFrame(market_data)
-
     summary = prepare_market_summary(df)
-
     prompt = build_ai_prompt(summary)
 
     if st.button("Generate AI Commentary"):
-
-        commentary, usage = generate_ai_commentary(prompt)
-
-        st.write(commentary)
-
-        st.divider()
-
-        st.write("Token Usage")
-
-        st.write("Prompt Tokens:", usage.prompt_tokens)
-        st.write("Completion Tokens:", usage.completion_tokens)
-        st.write("Total Tokens:", usage.total_tokens)
-
-
-with tab4:
-    st.title("Charts")
-    tab11, tab12, tab13 = st.tabs(["Employment numbers", "Interest rate", "PMI"])
-
-    with tab11:
-        st.title("Employment numbers")
-
-    with tab12:
-        st.title("Interest rate")
-
-    with tab13:
-        st.title("PMI")
-
-with tab5:
-    st.title("Bond market Stats")
-    #Download data  until 2025 from file
-    data_hist = pd.read_csv(DATA_FILE, index_col="Date",parse_dates=True)
-    print("data_hist: ", data_hist)
-
-    #Download data from 2026 using api call
-    current_date = str(datetime.now().date())
-    print(current_date)
-    data_current = get_yield_data(observation_start='2026-01-01',observation_end = current_date)
-
-    print("data_current: ", data_current)
-
-
-    #Combine both data and datahist dataframe in to one dataframe
-
-    data = pd.concat([data_hist, data_current])
-    data = data.sort_index()
-    data = data[~data.index.duplicated()]
-
-
-    st.subheader("US Treasury Yields")
-    fig, ax = plt.subplots(figsize=(10,5))
-    for col in data.columns:
-        ax.plot(data.index, data[col], label=col)
-    ax.set_xlabel("Date")
-    ax.set_ylabel("Yield (%)")
-    ax.legend()
-    ax.grid(alpha=0.3)
-    st.pyplot(fig)
-    latest_date = data.dropna(how='all').index[-1]
-
-    plot_yield_curve(str(latest_date.date()), data)
-
-
+        try:
+            commentary, usage = generate_ai_commentary(prompt)
+            st.write(commentary)
+            st.caption(f"Tokens Used: {usage.total_tokens}")
+        except Exception as e:
+            st.error(str(e))

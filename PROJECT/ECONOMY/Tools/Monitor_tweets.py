@@ -6,9 +6,33 @@ import feedparser
 import time
 from plyer import notification
 from datetime import datetime
+import os
+import requests
+from dotenv import load_dotenv
+load_dotenv()
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+
+if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+    raise ValueError("TOKEN or CHAT_ID is missing. Check your .env file.")
 
 # URL of a Trump Truth Social RSS mirror
 FEED_URL = "https://trumpstruth.org/feed"
+
+def send_telegram_message(token, chat_id, text):
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": text
+    }
+    try:
+        response = requests.post(url, data=payload)
+        response.raise_for_status()  # raises error if HTTP fails
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending message: {e}")
+        return None
+
 
 
 def monitor_truths():
@@ -31,13 +55,13 @@ def monitor_truths():
                     print(datetime.now())
 
                     notification.notify(
-                        title='Python Alert Test',
-                        message='Trump posted a tweet. Check it out..!',
-                        app_icon=None,  # You can add a path to an .ico file here later
-                        timeout=20,  # The alert stays visible for 10 seconds
+                    title='Python Alert Test',
+                    message='Trump posted a tweet. Check it out..!',
+                    app_icon=None,  # You can add a path to an .ico file here later
+                    timeout=20,  # The alert stays visible for 10 seconds
                     )
 
-
+                    send_telegram_message(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, "{latest_post.published}:  {latest_post.summary} - {latest_post.link} 🚀")
                     last_id = latest_post.id
 
             # Check every 60 seconds
