@@ -61,7 +61,7 @@ def monitor_truths():
                     timeout=20,  # The alert stays visible for 10 seconds
                     )
 
-                    send_telegram_message(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, "{latest_post.published}:  {latest_post.summary} - {latest_post.link} 🚀")
+                    send_telegram_message(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, f"{latest_post.published}:  {latest_post.summary} - {latest_post.link} 🚀")
                     last_id = latest_post.id
 
             # Check every 60 seconds
