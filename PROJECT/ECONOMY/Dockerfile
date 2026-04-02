@@ -19,9 +19,19 @@ EXPOSE 8501
 # 7. Run app
 CMD ["streamlit", "run", "master.py", "--server.address=0.0.0.0"]
 
+
+
+# To build and run the Docker container locally:
 # docker build -t pd-economy-app .
 # docker run -p 8501:8501 pd-economy-app
 #docker ps
+
+
+# To push container  from local system to dockerhub
+
+##docker login
+# docker tag pd-economy-app <your_dockerhub_username>/pd-economy-app:latest
+# docker push <your_dockerhub_username>/pd-economy-app:latest
 
 
 #To install docker in aws (ununtu vs amazon linux 2):
@@ -31,13 +41,6 @@ CMD ["streamlit", "run", "master.py", "--server.address=0.0.0.0"]
 # 4. sudo systemctl enable docker ==> enable docker to start on boot
 # 5. sudo usermod -aG docker $USER ==> add current user to docker group (optional, for running docker without sudo)
 
-
-
-# To push container  from local system to dockerhub
-
-##docker login
-# docker tag pd-economy-app <your_dockerhub_username>/pd-economy-app:latest
-# docker push <your_dockerhub_username>/pd-economy-app:latest
 
 
 
