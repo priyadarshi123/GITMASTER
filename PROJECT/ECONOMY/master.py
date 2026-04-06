@@ -52,7 +52,7 @@ MARKETS = {
 }
 
 all_data = download_all_markets(MARKETS)
-
+print(all_data.head(5))
 # -----------------------------
 # KPI ROW
 # -----------------------------
@@ -68,13 +68,12 @@ spx = all_data["Close"]["^GSPC"]
 nasdaq = all_data["Close"]["^IXIC"]
 gold = all_data["Close"]["GC=F"]
 btc = all_data["Close"]["BTC-USD"]
+sensex = all_data["Close"]["^BSESN"]
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 
-for col, (name, series) in zip(
-    [col1, col2, col3, col4],
-    [("S&P 500", spx), ("NASDAQ", nasdaq), ("Gold", gold), ("Bitcoin", btc)]
-):
+
+for col, (name, series) in zip([col1, col2, col3, col4, col5],[("S&P 500", spx), ("NASDAQ", nasdaq), ("Gold", gold), ("Bitcoin", btc), ("Sensex", sensex)]):
     last, change = calc_metric(series)
     col.metric(name, f"{last:,.0f}", f"{change:.2f}%")
 
@@ -136,6 +135,7 @@ with tab2:
             st.stop()
 
         data = download_all_markets({"P": {t: t for t in tickers_list}})
+
         returns = data["Close"].pct_change().dropna()
 
         port_ret = (returns.mean() * weights_list).sum() * 252
