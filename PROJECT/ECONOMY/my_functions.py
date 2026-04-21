@@ -295,11 +295,3 @@ def plot_yield_curve(date,yields):
     ax.grid(True)
 
     st.pyplot(fig)
-
-
-
-
-
-
-
-

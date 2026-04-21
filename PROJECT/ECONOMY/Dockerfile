@@ -17,12 +17,13 @@ COPY . .
 EXPOSE 8501
 
 # 7. Run app
-CMD ["streamlit", "run", "master.py", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "master.py", "--server.address=0.0.0.0" "--server.port=8501", "--server.headless=true"]
 
 
 
 # To build and run the Docker container locally:
 # docker build -t pd-economy-app .
+#docker image ls
 # docker run -p 8501:8501 pd-economy-app
 #docker ps
 

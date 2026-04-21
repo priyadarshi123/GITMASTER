@@ -6,14 +6,6 @@ import matplotlib.pyplot as plt
 # Step 1: Download data
 symbol = "AAPL"
 
-
-
-
-
-
-
-
-
 data = yf.download(symbol, start="2024-01-01", end="2026-05-01")
 
 # Step 2: Calculate moving averages
