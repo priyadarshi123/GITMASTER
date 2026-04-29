@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 # CONFIG
 # -----------------------------
 HOST = '127.0.0.1'
-PORT =  4002   #7497
+PORT =  4002   #7497 for production
 CLIENT_ID = 5
 
 SYMBOL = 'GC'  # Gold futures
@@ -16,8 +16,8 @@ CURRENCY = 'USD'
 EXPIRY = '202606'  # June 2026
 
 BAR_SIZE = '1 min'
-CHUNK_DURATION = '3 D'
-TOTAL_DAYS = 15
+CHUNK_DURATION = '6 D'
+TOTAL_DAYS = 30
 
 RETRIES = 3
 SLEEP_BETWEEN_CALLS = 2

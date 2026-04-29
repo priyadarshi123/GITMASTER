@@ -1,0 +1,21 @@
+strategy:
+  spike_threshold: 0.02
+  volume_multiplier: 2
+  imbalance_threshold: 0.3
+  hold_minutes: 3
+
+risk:
+  max_position_size: 1
+  stop_loss: 0.01
+  take_profit: 0.02
+  max_trades_per_hour: 3
+  cooldown_seconds: 300
+
+broker:
+  host: "127.0.0.1"
+  port: 4002
+  client_id: 1
+
+news:
+  enabled: false
+  api_key: "3042e948-ae37-461b-8e9f-c943e4954bac"
