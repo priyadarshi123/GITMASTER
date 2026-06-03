@@ -1,0 +1,2 @@
+2024-03-01 09:31:05 ERROR FIX session dropped: EXCHANGE_A
+2024-03-01 09:31:07 INFO Reconnecting to EXCHANGE_A
