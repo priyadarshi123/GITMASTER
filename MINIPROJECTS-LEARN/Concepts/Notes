@@ -1,0 +1,87 @@
+Threading
+
+        Threads share the same memory.
+
+        Best for:
+
+        API calls
+        Waiting tasks
+        Network requests
+        File IO
+        Database operations
+
+        Example:
+
+        Listening to multiple stock feeds simultaneously
+Multiprocessing
+
+        Processes have separate memory.
+
+        Best for:
+
+        Heavy calculations
+        ML models
+        Backtesting
+        Monte Carlo
+        Risk calculations
+
+        Example:
+
+        Calculating VaR on 10 years of data
+
+Golden Rule
+        Use Case	Best Tool
+        Waiting on network/file/db	Threading
+        Heavy CPU math	Multiprocessing
+-------------------------------------------------------------------------------------------------
+
+put() → assign task
+get() → employee picks task
+task_done() → employee reports completion
+join() → manager waits until all reports are complete
+
+Without task_done(), manager keeps waiting.
+
+-----------------------------------------------------------------------------------------------
+
+what is generator function?
+
+A generator function is a special type of function in Python that allows you to create an iterator.
+Instead of returning a single value, a generator function uses the `yield` keyword to produce
+a sequence of values over time, one at a time. This makes it memory efficient, as it generates
+values on the fly rather than storing them all in memory at once.
+
+def numbers():
+    yield 1
+    yield 2
+    yield 3
+
+g = numbers()
+
+print(next(g))
+print(next(g))
+print(next(g))
+
+
+1
+2
+3
+
+def get_market_data(symbol):
+
+    while True:
+
+        tick = ...
+
+        yield tick
+--------------------------------------------
+
+yield fucntion (which is a generator ) has its own while loop under it , so it keeps on running
+until it is exhausted.
+
+processor function needs a explicit while loop to keep it running.
+
+
+
+
+

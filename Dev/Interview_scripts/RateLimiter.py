@@ -12,13 +12,25 @@ def rate_limiter(events,N,T):
     throttled=[]
 
     for timestamp,event_id in events:
-
+        # Remove events outside the time window
         while window and timestamp - window[0] > T:
-            print("Hi")
+            print("Hi - removing old event")
             window.popleft()
-            print(window)
+            print(f"Window after removal: {list(window)}")
+        
+        # Check if we can allow this event
+        print(window)
+        if len(window) < N:
+            window.append(timestamp)
+            allowed.append((timestamp, event_id))
+            print(f"ALLOWED: {event_id} at {timestamp}")
+        else:
+            throttled.append((timestamp, event_id))
+            print(f"THROTTLED: {event_id} at {timestamp}")
 
-    print(window)
+    print(f"\nFinal window: {list(window)}")
+    print(f"Allowed: {allowed}")
+    print(f"Throttled: {throttled}")
 
 
 events = [

@@ -1,0 +1,255 @@
+14:23:19  INFO     ============================================================
+14:23:19  INFO     SG & HK HF Job Tracker -- 2026-08-19 14:23
+14:23:19  INFO     Region: HK + SG | Mode: Selenium (Chrome)
+14:23:19  INFO     Scraping 68 | Manual 18 | Reference excluded 2 | Keywords 20
+14:23:19  INFO     Estimated runtime: ~9 min
+14:23:19  INFO     ============================================================
+14:23:19  INFO     ====== WebDriver manager ======
+14:23:26  INFO     Get LATEST chromedriver version for google-chrome
+14:23:27  INFO     Get LATEST chromedriver version for google-chrome
+14:23:28  INFO     There is no [win64] chromedriver "151.0.7922.138" for browser google-chrome "151.0.7922" in cache
+14:23:28  INFO     Get LATEST chromedriver version for google-chrome
+14:23:29  INFO     WebDriver version 151.0.7922.138 selected
+14:23:29  INFO     Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win32/chromedriver-win32.zip
+14:23:29  INFO     About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win32/chromedriver-win32.zip
+14:23:30  INFO     Driver downloading response is 200
+14:23:30  INFO     Get LATEST chromedriver version for google-chrome
+14:23:31  INFO     Driver has been saved in cache [C:\Users\priya\.wdm\drivers\chromedriver\win64\151.0.7922.138]
+14:23:32  INFO     [ 1/68] Citadel                               
+14:23:40  INFO       -> 3 match(es) [found]
+14:23:42  INFO     [ 2/68] Citadel Securities                    
+14:23:51  INFO       -> 0 match(es) [none]
+14:23:53  INFO     [ 3/68] Millennium Management                 
+14:24:03  INFO       -> 3 match(es) [found]
+14:24:05  INFO     [ 4/68] Point72                               
+14:24:13  INFO       -> 0 match(es) [none]
+14:24:15  INFO     [ 5/68] Balyasny Asset Management             
+14:24:23  INFO       -> 9 match(es) [found]
+14:24:25  INFO     [ 6/68] Schonfeld Strategic Advisors          
+14:24:32  INFO       -> 1 match(es) [found]
+14:24:34  INFO     [ 7/68] ExodusPoint Capital                   
+14:24:41  INFO       -> 0 match(es) [none]
+14:24:43  INFO     [ 8/68] Jain Global                           
+14:24:52  INFO       -> 0 match(es) [none]
+14:24:54  INFO     [ 9/68] Verition Fund Management              
+14:25:06  INFO       -> 0 match(es) [none]
+14:25:08  INFO     [10/68] Walleye Capital                       
+14:25:21  INFO       -> 0 match(es) [none]
+14:25:23  INFO     [11/68] Hudson Bay Capital                    
+14:25:31  INFO       -> 0 match(es) [none]
+14:25:33  INFO     [12/68] Eisler Capital                        
+14:25:33  WARNING    x selenium error: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xce3353+fd93]
+	chromedriver!GetHandleVerifier [0xce3394+fdd4]
+	chromedriver!(No symbol) [0xad9220]
+	chromedriver!(No symbol) [0xad67b2]
+	chromedriver!(No symbol) [0xac9b24]
+	chromedriver!(No symbol) [0xacb520]
+	chromedriver!(No symbol) [0xac9faf]
+	chromedriver!(No symbol) [0xac98f5]
+	chromedriver!(No symbol) [0xac95f5]
+	chromedriver!(No symbol) [0xac77c8]
+	chromedriver!(No symbol) [0xac7eda]
+	chromedriver!(No symbol) [0xadccae]
+	chromedriver!(No symbol) [0xb63f14]
+	chromedriver!(No symbol) [0xb4587c]
+	chromedriver!(No symbol) [0xb634d9]
+	chromedriver!(No symbol) [0xb45616]
+	chromedriver!(No symbol) [0xb187e9]
+	chromedriver!(No symbol) [0xb195b4]
+	chromedriver!GetHandleVerifier [0xf7f51a+2abf5a]
+	chromedriver!GetHandleVerifier [0xf7aa21+2a7461]
+	chromedriver!GetHandleVerifier [0xd0f374+3bdb4]
+	chromedriver!GetHandleVerifier [0xcfe036+2aa76]
+	chromedriver!GetHandleVerifier [0xd04efd+3193d]
+	chromedriver!GetHandleVerifier [0xcec8a8+192e8]
+	chromedriver!GetHandleVerifier [0xceca55+19495]
+	chromedriver!GetHandleVerifier [0xcd53ff+1e3f]
+	KERNEL32!BaseThreadInitThunk [0x768d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x772be12b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x772be0b1+231]
+
+14:25:33  INFO       -> 0 match(es) [error]
+14:25:35  INFO     [13/68] Brevan Howard                         
+14:25:44  INFO       -> 5 match(es) [found]
+14:25:46  INFO     [14/68] Capula Investment Management          
+14:25:55  INFO       -> 0 match(es) [none]
+14:25:57  INFO     [15/68] Alphadyne Asset Management            
+14:26:05  INFO       -> 0 match(es) [none]
+14:26:07  INFO     [16/68] Rokos Capital Management              
+14:26:15  INFO       -> 0 match(es) [none]
+14:26:17  INFO     [17/68] Tudor Investment Corporation          
+14:26:24  INFO       -> 0 match(es) [none]
+14:26:26  INFO     [18/68] Bridgewater Associates                
+14:26:39  INFO       -> 1 match(es) [found]
+14:26:41  INFO     [19/68] Dymon Asia Capital                    
+14:26:50  INFO       -> 1 match(es) [found]
+14:26:52  INFO     [20/68] Quantedge Capital                     
+14:27:00  INFO       -> 0 match(es) [none]
+14:27:02  INFO     [21/68] Keystone Investors                    
+14:27:09  INFO       -> 0 match(es) [none]
+14:27:11  INFO     [22/68] Gordian Capital                       
+14:27:20  INFO       -> 3 match(es) [found]
+14:27:22  INFO     [23/68] Arisaig Partners                      
+14:27:35  INFO       -> 0 match(es) [none]
+14:27:37  INFO     [24/68] Avanda Investment Management          
+14:27:43  INFO       -> 0 match(es) [none]
+14:27:45  INFO     [25/68] Broad Peak Investment Advisers        
+14:28:31  WARNING    x selenium error: Message: timeout: Timed out receiving message from renderer: 45.000
+  (Session info: chrome=151.0.7922.138)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0xce3353+fd93]
+	chromedriver!GetHandleVerifier [0xce3394+fdd4]
+	chromedriver!(No symbol) [0xad9220]
+	chromedriver!(No symbol) [0xac98c3]
+	chromedriver!(No symbol) [0xac95f5]
+	chromedriver!(No symbol) [0xac77c8]
+	chromedriver!(No symbol) [0xac7eda]
+	chromedriver!(No symbol) [0xadccae]
+	chromedriver!(No symbol) [0xb63f14]
+	chromedriver!(No symbol) [0xb4587c]
+	chromedriver!(No symbol) [0xb634d9]
+	chromedriver!(No symbol) [0xb45616]
+	chromedriver!(No symbol) [0xb187e9]
+	chromedriver!(No symbol) [0xb195b4]
+	chromedriver!GetHandleVerifier [0xf7f51a+2abf5a]
+	chromedriver!GetHandleVerifier [0xf7aa21+2a7461]
+	chromedriver!GetHandleVerifier [0xd0f374+3bdb4]
+	chromedriver!GetHandleVerifier [0xcfe036+2aa76]
+	chromedriver!GetHandleVerifier [0xd04efd+3193d]
+	chromedriver!GetHandleVerifier [0xcec8a8+192e8]
+	chromedriver!GetHandleVerifier [0xceca55+19495]
+	chromedriver!GetHandleVerifier [0xcd53ff+1e3f]
+	KERNEL32!BaseThreadInitThunk [0x768d5d49+19]
+	ntdll!RtlInitializeExceptionChain [0x772be12b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x772be0b1+231]
+
+14:28:31  INFO       -> 0 match(es) [error]
+14:28:33  INFO     [26/68] Vulpes Investment Management          
+14:28:41  INFO       -> 0 match(es) [none]
+14:28:43  INFO     [27/68] Lumiere Capital                       
+14:28:51  INFO       -> 0 match(es) [none]
+14:28:53  INFO     [28/68] Symmetry Investments                  
+14:29:02  INFO       -> 0 match(es) [none]
+14:29:04  INFO     [29/68] BFAM Partners                         
+14:29:10  INFO       -> 0 match(es) [none]
+14:29:12  INFO     [30/68] Polymer Capital Management            
+14:29:21  INFO       -> 0 match(es) [none]
+14:29:23  INFO     [31/68] PAG                                   
+14:29:30  INFO       -> 0 match(es) [none]
+14:29:32  INFO     [32/68] Hillhouse Investment                  
+14:29:39  INFO       -> 0 match(es) [none]
+14:29:41  INFO     [33/68] Value Partners Group                  
+14:29:53  INFO       -> 0 match(es) [none]
+14:29:55  INFO     [34/68] Aspex Management                      
+14:30:01  INFO       -> 0 match(es) [none]
+14:30:03  INFO     [35/68] Tybourne Capital Management           
+14:30:10  INFO       -> 0 match(es) [none]
+14:30:12  INFO     [36/68] Oasis Management                      
+14:30:22  INFO       -> 0 match(es) [none]
+14:30:24  INFO     [37/68] Janchor Partners                      
+14:30:32  INFO       -> 0 match(es) [none]
+14:30:34  INFO     [38/68] Nine Masts Capital                    
+14:30:43  INFO       -> 0 match(es) [none]
+14:30:45  INFO     [39/68] Ward Ferry Management                 
+14:30:52  INFO       -> 0 match(es) [none]
+14:30:54  INFO     [40/68] Myriad Asset Management               
+14:31:05  INFO       -> 0 match(es) [none]
+14:31:07  INFO     [41/68] LMR Partners                          
+14:31:15  INFO       -> 0 match(es) [none]
+14:31:17  INFO     [42/68] Asia Research and Capital Management  
+14:31:25  INFO       -> 0 match(es) [none]
+14:31:27  INFO     [43/68] Zeal Asset Management                 
+14:31:34  INFO       -> 0 match(es) [none]
+14:31:36  INFO     [44/68] Two Sigma                             
+14:31:47  INFO       -> 0 match(es) [none]
+14:31:49  INFO     [45/68] Man Group                             
+14:32:00  INFO       -> 0 match(es) [none]
+14:32:02  INFO     [46/68] D. E. Shaw                            
+14:32:10  INFO       -> 3 match(es) [found]
+14:32:12  INFO     [47/68] WorldQuant                            
+14:32:19  INFO       -> 0 match(es) [none]
+14:32:21  INFO     [48/68] Squarepoint Capital                   
+14:32:31  INFO       -> 4 match(es) [found]
+14:32:33  INFO     [49/68] Winton Group                          
+14:32:41  INFO       -> 0 match(es) [none]
+14:32:43  INFO     [50/68] AQR Capital Management                
+14:32:51  INFO       -> 0 match(es) [none]
+14:32:53  INFO     [51/68] Jane Street                           
+14:33:02  INFO       -> 0 match(es) [none]
+14:33:04  INFO     [52/68] Hudson River Trading                  
+14:33:12  INFO       -> 10 match(es) [found]
+14:33:14  INFO     [53/68] DRW                                   
+14:33:25  INFO       -> 0 match(es) [none]
+14:33:27  INFO     [54/68] Jump Trading                          
+14:33:38  INFO       -> 6 match(es) [found]
+14:33:40  INFO     [55/68] SIG (Susquehanna)                     
+14:33:51  INFO       -> 5 match(es) [found]
+14:33:53  INFO     [56/68] Optiver                               
+14:34:02  INFO       -> 2 match(es) [found]
+14:34:04  INFO     [57/68] IMC Trading                           
+14:34:13  INFO       -> 0 match(es) [none]
+14:34:15  INFO     [58/68] Eclipse Trading                       
+14:34:21  INFO       -> 1 match(es) [found]
+14:34:23  INFO     [59/68] Tower Research Capital                
+14:34:32  INFO       -> 0 match(es) [none]
+14:34:34  INFO     [60/68] Flow Traders                          
+14:34:45  INFO       -> 0 match(es) [none]
+14:34:47  INFO     [61/68] Virtu Financial                       
+14:34:56  INFO       -> 0 match(es) [none]
+14:34:58  INFO     [62/68] XTX Markets                           
+14:35:06  INFO       -> 0 match(es) [none]
+14:35:08  INFO     [63/68] Maven Securities                      
+14:35:18  INFO       -> 0 match(es) [none]
+14:35:20  INFO     [64/68] Nine Mile Financial                   
+14:35:51  INFO       -> 1 match(es) [found]
+14:35:53  INFO     [65/68] Grasshopper Asia                      
+14:36:00  INFO       -> 2 match(es) [found]
+14:36:02  INFO     [66/68] Vivienne Court Trading                
+14:36:11  INFO       -> 0 match(es) [none]
+14:36:13  INFO     [67/68] Wintermute                            
+14:36:21  INFO       -> 0 match(es) [none]
+14:36:23  INFO     [68/68] QCP Capital                           
+14:36:31  INFO       -> 0 match(es) [none]
+14:36:37  INFO     ============================================================
+14:36:37  INFO     DONE -- 60 total match(es), 60 new today
+14:36:37  INFO     Report -> D:\Study\GITMASTER\Tools\Jobsearch2\hf_jobs_report.html
+17:56:50  INFO     ============================================================
+17:56:50  INFO     SG & HK HF Job Tracker -- 2026-09-23 17:56
+17:56:50  INFO     Region: HK + SG | Mode: Selenium (Chrome)
+17:56:50  INFO     Scraping 69 | Manual 18 | Reference excluded 2 | Keywords 20
+17:56:50  INFO     Estimated runtime: ~9 min
+17:56:50  INFO     ============================================================
+17:56:50  ERROR    Selenium or webdriver-manager not installed.
+Run:  pip install selenium webdriver-manager
+17:56:50  WARNING  Selenium unavailable -- falling back to requests
+17:56:50  INFO     [ 1/69] Citadel                               
+17:56:51  WARNING    x requests error: 403 Client Error: Forbidden for url: https://www.citadel.com/careers/open-opportunities/
+17:56:51  INFO       -> 0 match(es) [error]
+17:56:53  INFO     [ 2/69] Citadel Securities                    
+17:56:53  WARNING    x requests error: 403 Client Error: Forbidden for url: https://www.citadelsecurities.com/careers/open-opportunities/
+17:56:53  INFO       -> 0 match(es) [error]
+17:56:55  INFO     [ 3/69] Millennium Management                 
+17:56:57  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:56:57  INFO       -> 0 match(es) [error]
+17:56:59  INFO     [ 4/69] Point72                               
+17:57:00  WARNING    x requests error: 500 Server Error: Internal Server Error for url: https://careers.point72.com/CSJobDetail?jobName=all-open-positions&jobCode=ALL
+17:57:00  INFO       -> 0 match(es) [error]
+17:57:02  INFO     [ 5/69] Balyasny Asset Management             
+17:57:04  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:57:04  INFO       -> 0 match(es) [error]
+17:57:06  INFO     [ 6/69] Schonfeld Strategic Advisors          
+17:57:07  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:57:07  INFO       -> 0 match(es) [error]
+17:57:09  INFO     [ 7/69] ExodusPoint Capital                   
+17:57:09  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:57:09  INFO       -> 0 match(es) [error]
+17:57:11  INFO     [ 8/69] Jain Global                           
+17:57:14  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:57:14  INFO       -> 0 match(es) [error]
+17:57:16  INFO     [ 9/69] Verition Fund Management              
+17:57:18  WARNING    x requests error: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+17:57:18  INFO       -> 0 match(es) [error]
+17:57:20  INFO     [10/69] Walleye Capital                       

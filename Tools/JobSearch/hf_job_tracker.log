@@ -1,0 +1,323 @@
+16:59:02  INFO     ============================================================
+16:59:02  INFO     Singapore HF Job Tracker -- 2026-05-14 16:59
+16:59:02  INFO     Mode: Selenium (Chrome) | Funds: 16 | Keywords: 16
+16:59:02  INFO     ============================================================
+16:59:02  ERROR    Selenium or webdriver-manager not installed.
+Run:  pip install selenium webdriver-manager
+16:59:02  WARNING  Selenium unavailable -- falling back to requests
+16:59:02  INFO     Scanning Citadel                            
+16:59:03  WARNING    x requests error: 403 Client Error: Forbidden for url: https://www.citadel.com/careers/open-positions/
+16:59:03  INFO       -> 0 match(es) [error]
+16:59:05  INFO     Scanning Millennium Management              
+16:59:06  INFO       -> 0 match(es) [none]
+16:59:08  INFO     Scanning Point72                            
+16:59:10  WARNING    x requests error: 500 Server Error: Internal Server Error for url: https://careers.point72.com/CSJobDetail?jobName=all-open-positions&jobCode=ALL
+16:59:10  INFO       -> 0 match(es) [error]
+16:59:12  INFO     Scanning Balyasny Asset Management          
+16:59:12  WARNING    x requests error: HTTPSConnectionPool(host='www.balyasny.com', port=443): Max retries exceeded with url: /careers (Caused by NameResolutionError("HTTPSConnection(host='www.balyasny.com', port=443): Failed to resolve 'www.balyasny.com' ([Errno 11001] getaddrinfo failed)"))
+16:59:12  INFO       -> 0 match(es) [error]
+16:59:14  INFO     Scanning Two Sigma                          
+16:59:17  WARNING    x requests error: 404 Client Error: Not Found for url: https://careers.twosigma.com/careers/SearchJobs/
+16:59:17  INFO       -> 0 match(es) [error]
+16:59:19  INFO     Scanning Man Group                          
+16:59:21  WARNING    x requests error: 404 Client Error: Not Found for url: https://www.man.com/careers/vacancies
+16:59:21  INFO       -> 0 match(es) [error]
+16:59:23  INFO     Scanning Schonfeld Strategic Advisors       
+16:59:24  INFO       -> 6 match(es) [found]
+16:59:26  INFO     Scanning ExodusPoint Capital                
+16:59:27  WARNING    x requests error: 404 Client Error: Not Found for url: https://www.exoduspoint.com/careers
+16:59:27  INFO       -> 0 match(es) [error]
+16:59:29  INFO     Scanning Dymon Asia Capital                 
+16:59:30  WARNING    x requests error: 404 Client Error: Not Found for url: https://www.dymonasia.com/careers
+16:59:30  INFO       -> 0 match(es) [error]
+16:59:32  INFO     Scanning Quantedge Capital                  
+16:59:36  INFO       -> 0 match(es) [none]
+16:59:38  INFO     Scanning Crescent Asset Management          
+16:59:40  INFO       -> 0 match(es) [none]
+16:59:42  INFO     Scanning Southern Ridges Capital            
+16:59:43  INFO       -> 0 match(es) [none]
+16:59:45  INFO     Scanning Bridgewater Associates             
+16:59:46  INFO       -> 0 match(es) [none]
+16:59:48  INFO     Scanning Winton Group                       
+16:59:50  WARNING    x requests error: 404 Client Error: Not Found for url: https://www.winton.com/careers
+16:59:50  INFO       -> 0 match(es) [error]
+16:59:52  INFO     Scanning WorldQuant                         
+16:59:53  INFO       -> 2 match(es) [found]
+16:59:55  INFO     Scanning Squarepoint Capital                
+16:59:57  WARNING    x requests error: 404 Client Error: Not Found for url: https://www.squarepoint-capital.com/careers
+16:59:57  INFO       -> 0 match(es) [error]
+16:59:59  INFO     ============================================================
+16:59:59  INFO     DONE -- 8 total match(es), 8 new today
+16:59:59  INFO     Report -> D:\Study\GITMASTER\Tools\JobSearch\hf_jobs_report.html
+17:04:30  INFO     ============================================================
+17:04:30  INFO     Singapore HF Job Tracker -- 2026-05-14 17:04
+17:04:30  INFO     Mode: Selenium (Chrome) | Funds: 16 | Keywords: 16
+17:04:30  INFO     ============================================================
+17:04:30  INFO     ====== WebDriver manager ======
+17:04:36  INFO     Get LATEST chromedriver version for google-chrome
+17:04:37  INFO     Get LATEST chromedriver version for google-chrome
+17:04:38  INFO     There is no [win64] chromedriver "148.0.7778.167" for browser google-chrome "148.0.7778" in cache
+17:04:38  INFO     Get LATEST chromedriver version for google-chrome
+17:04:39  INFO     WebDriver version 148.0.7778.167 selected
+17:04:39  INFO     Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.167/win32/chromedriver-win32.zip
+17:04:39  INFO     About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.167/win32/chromedriver-win32.zip
+17:04:40  INFO     Driver downloading response is 200
+17:04:40  INFO     Get LATEST chromedriver version for google-chrome
+17:04:41  INFO     Driver has been saved in cache [C:\Users\priya\.wdm\drivers\chromedriver\win64\148.0.7778.167]
+17:04:43  INFO     Scanning Citadel                            
+17:04:50  INFO       -> 3 match(es) [found]
+17:04:52  INFO     Scanning Millennium Management              
+17:05:02  INFO       -> 0 match(es) [none]
+17:05:04  INFO     Scanning Point72                            
+17:05:12  INFO       -> 0 match(es) [none]
+17:05:14  INFO     Scanning Balyasny Asset Management          
+17:05:14  WARNING    x selenium error: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=148.0.7778.97)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x9d7123+10a23]
+	chromedriver!GetHandleVerifier [0x9d7254+10b54]
+	chromedriver!(No symbol) [0x7f1e90]
+	chromedriver!(No symbol) [0x7ef39e]
+	chromedriver!(No symbol) [0x7e2414]
+	chromedriver!(No symbol) [0x7e3e70]
+	chromedriver!(No symbol) [0x7e289f]
+	chromedriver!(No symbol) [0x7e21e5]
+	chromedriver!(No symbol) [0x7e1ee5]
+	chromedriver!(No symbol) [0x7dfff8]
+	chromedriver!(No symbol) [0x7e070a]
+	chromedriver!(No symbol) [0x7f592e]
+	chromedriver!(No symbol) [0x87b3a4]
+	chromedriver!(No symbol) [0x85d78c]
+	chromedriver!(No symbol) [0x87a936]
+	chromedriver!(No symbol) [0x85d526]
+	chromedriver!(No symbol) [0x8308f9]
+	chromedriver!(No symbol) [0x8316b4]
+	chromedriver!GetHandleVerifier [0xc71ac4+2ab3c4]
+	chromedriver!GetHandleVerifier [0xc6d0ed+2a69ed]
+	chromedriver!GetHandleVerifier [0xc8e4f5+2c7df5]
+	chromedriver!GetHandleVerifier [0x9f1128+2aa28]
+	chromedriver!GetHandleVerifier [0x9f8bbd+324bd]
+	chromedriver!GetHandleVerifier [0x9dfb28+19428]
+	chromedriver!GetHandleVerifier [0x9dfcd5+195d5]
+	chromedriver!GetHandleVerifier [0x9c91cf+2acf]
+	KERNEL32!BaseThreadInitThunk [0x75d75d49+19]
+	ntdll!RtlInitializeExceptionChain [0x7708d83b+6b]
+	ntdll!RtlGetAppContainerNamedObjectPath [0x7708d7c1+231]
+
+17:05:14  INFO       -> 0 match(es) [error]
+17:05:16  INFO     Scanning Two Sigma                          
+17:05:27  INFO       -> 0 match(es) [none]
+17:05:29  INFO     Scanning Man Group                          
+17:05:41  INFO       -> 0 match(es) [none]
+17:05:43  INFO     Scanning Schonfeld Strategic Advisors       
+17:05:50  INFO       -> 6 match(es) [found]
+17:05:52  INFO     Scanning ExodusPoint Capital                
+17:05:59  INFO       -> 0 match(es) [none]
+17:06:01  INFO     Scanning Dymon Asia Capital                 
+17:06:09  INFO       -> 0 match(es) [none]
+17:06:11  INFO     Scanning Quantedge Capital                  
+17:06:20  INFO       -> 0 match(es) [none]
+17:06:22  INFO     Scanning Crescent Asset Management          
+17:06:30  INFO       -> 0 match(es) [none]
+17:06:32  INFO     Scanning Southern Ridges Capital            
+17:06:40  INFO       -> 0 match(es) [none]
+17:06:42  INFO     Scanning Bridgewater Associates             
+17:06:53  INFO       -> 0 match(es) [none]
+17:06:55  INFO     Scanning Winton Group                       
+17:07:03  INFO       -> 0 match(es) [none]
+17:07:05  INFO     Scanning WorldQuant                         
+17:07:12  INFO       -> 2 match(es) [found]
+17:07:14  INFO     Scanning Squarepoint Capital                
+17:07:24  INFO       -> 18 match(es) [found]
+17:07:28  INFO     ============================================================
+17:07:28  INFO     DONE -- 29 total match(es), 22 new today
+17:07:28  INFO     Report -> D:\Study\GITMASTER\Tools\JobSearch\hf_jobs_report.html
+22:48:32  INFO     ============================================================
+22:48:32  INFO     Singapore HF Job Tracker -- 2026-06-04 22:48
+22:48:32  INFO     Mode: Selenium (Chrome) | Funds: 20 | Keywords: 17
+22:48:32  INFO     ============================================================
+22:48:32  INFO     ====== WebDriver manager ======
+22:48:36  INFO     Get LATEST chromedriver version for google-chrome
+22:48:36  INFO     Get LATEST chromedriver version for google-chrome
+22:48:37  INFO     There is no [win64] chromedriver "148.0.7778.178" for browser google-chrome "148.0.7778" in cache
+22:48:37  INFO     Get LATEST chromedriver version for google-chrome
+22:48:38  INFO     WebDriver version 148.0.7778.178 selected
+22:48:38  INFO     Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.178/win32/chromedriver-win32.zip
+22:48:38  INFO     About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/148.0.7778.178/win32/chromedriver-win32.zip
+22:48:39  INFO     Driver downloading response is 200
+22:48:39  INFO     Get LATEST chromedriver version for google-chrome
+22:48:40  INFO     Driver has been saved in cache [C:\Users\priya\.wdm\drivers\chromedriver\win64\148.0.7778.178]
+22:48:42  INFO     Scanning Citadel                            
+22:48:50  INFO       -> 3 match(es) [found]
+22:48:52  INFO     Scanning Millennium Management              
+22:49:02  INFO       -> 0 match(es) [none]
+22:49:04  INFO     Scanning Point72                            
+22:49:11  INFO       -> 0 match(es) [none]
+22:49:13  INFO     Scanning Balyasny Asset Management          
+22:49:22  INFO       -> 6 match(es) [found]
+22:49:24  INFO     Scanning Two Sigma                          
+22:49:35  INFO       -> 0 match(es) [none]
+22:49:37  INFO     Scanning Man Group                          
+22:49:48  INFO       -> 0 match(es) [none]
+22:49:50  INFO     Scanning Schonfeld Strategic Advisors       
+22:49:58  INFO       -> 9 match(es) [found]
+22:50:00  INFO     Scanning ExodusPoint Capital                
+22:50:06  INFO       -> 0 match(es) [none]
+22:50:08  INFO     Scanning Dymon Asia Capital                 
+22:50:17  INFO       -> 0 match(es) [none]
+22:50:19  INFO     Scanning Quantedge Capital                  
+22:50:26  INFO       -> 0 match(es) [none]
+22:50:28  INFO     Scanning Crescent Asset Management          
+22:50:36  INFO       -> 0 match(es) [none]
+22:50:38  INFO     Scanning Southern Ridges Capital            
+22:50:45  INFO       -> 0 match(es) [none]
+22:50:47  INFO     Scanning Bridgewater Associates             
+22:50:56  INFO       -> 0 match(es) [none]
+22:50:58  INFO     Scanning Winton Group                       
+22:51:06  INFO       -> 0 match(es) [none]
+22:51:08  INFO     Scanning WorldQuant                         
+22:51:15  INFO       -> 2 match(es) [found]
+22:51:17  INFO     Scanning Squarepoint Capital                
+22:51:26  INFO       -> 18 match(es) [found]
+22:51:28  INFO     Scanning Nine mile                          
+22:51:36  INFO       -> 2 match(es) [found]
+22:51:38  INFO     Scanning Jump trading                       
+22:51:46  INFO       -> 6 match(es) [found]
+22:51:48  INFO     Scanning SIG                                
+22:51:58  INFO       -> 6 match(es) [found]
+22:52:00  INFO     Scanning Optiver                            
+22:52:08  INFO       -> 0 match(es) [none]
+22:52:12  INFO     ============================================================
+22:52:12  INFO     DONE -- 52 total match(es), 26 new today
+22:52:12  INFO     Report -> D:\Study\GITMASTER\Tools\JobSearch\hf_jobs_report.html
+11:28:41  INFO     ============================================================
+11:28:41  INFO     Singapore HF Job Tracker -- 2026-07-18 11:28
+11:28:41  INFO     Mode: Selenium (Chrome) | Funds: 20 | Keywords: 17
+11:28:41  INFO     ============================================================
+11:28:41  INFO     ====== WebDriver manager ======
+11:28:46  INFO     Get LATEST chromedriver version for google-chrome
+11:28:47  INFO     Get LATEST chromedriver version for google-chrome
+11:28:48  INFO     There is no [win64] chromedriver "150.0.7871.124" for browser google-chrome "150.0.7871" in cache
+11:28:48  INFO     Get LATEST chromedriver version for google-chrome
+11:28:49  INFO     WebDriver version 150.0.7871.124 selected
+11:28:49  INFO     Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/150.0.7871.124/win32/chromedriver-win32.zip
+11:28:49  INFO     About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/150.0.7871.124/win32/chromedriver-win32.zip
+11:28:50  INFO     Driver downloading response is 200
+11:28:52  INFO     Get LATEST chromedriver version for google-chrome
+11:28:52  INFO     Driver has been saved in cache [C:\Users\priya\.wdm\drivers\chromedriver\win64\150.0.7871.124]
+11:28:54  INFO     Scanning Citadel                            
+11:29:03  INFO       -> 9 match(es) [found]
+11:29:05  INFO     Scanning Millennium Management              
+11:29:17  INFO       -> 0 match(es) [none]
+11:29:19  INFO     Scanning Point72                            
+11:29:28  INFO       -> 0 match(es) [none]
+11:29:30  INFO     Scanning Balyasny Asset Management          
+11:29:39  INFO       -> 2 match(es) [found]
+11:29:41  INFO     Scanning Two Sigma                          
+11:29:52  INFO       -> 0 match(es) [none]
+11:29:54  INFO     Scanning Man Group                          
+11:30:07  INFO       -> 0 match(es) [none]
+11:30:09  INFO     Scanning Schonfeld Strategic Advisors       
+11:30:17  INFO       -> 6 match(es) [found]
+11:30:19  INFO     Scanning ExodusPoint Capital                
+11:30:29  INFO       -> 0 match(es) [none]
+11:30:31  INFO     Scanning Dymon Asia Capital                 
+11:30:39  INFO       -> 0 match(es) [none]
+11:30:41  INFO     Scanning Quantedge Capital                  
+11:30:50  INFO       -> 0 match(es) [none]
+11:30:52  INFO     Scanning Crescent Asset Management          
+11:30:59  INFO       -> 0 match(es) [none]
+11:31:01  INFO     Scanning Southern Ridges Capital            
+11:31:08  INFO       -> 0 match(es) [none]
+11:31:10  INFO     Scanning Bridgewater Associates             
+11:31:24  INFO       -> 0 match(es) [none]
+11:31:26  INFO     Scanning Winton Group                       
+11:31:34  INFO       -> 0 match(es) [none]
+11:31:36  INFO     Scanning WorldQuant                         
+11:31:43  INFO       -> 0 match(es) [none]
+11:31:45  INFO     Scanning Squarepoint Capital                
+11:31:55  INFO       -> 18 match(es) [found]
+11:31:57  INFO     Scanning Nine mile                          
+11:32:27  INFO       -> 2 match(es) [found]
+11:32:29  INFO     Scanning Jump trading                       
+11:32:37  INFO       -> 4 match(es) [found]
+11:32:39  INFO     Scanning SIG                                
+11:32:50  INFO       -> 5 match(es) [found]
+11:32:52  INFO     Scanning Optiver                            
+11:33:00  INFO       -> 4 match(es) [found]
+11:33:05  INFO     ============================================================
+11:33:05  INFO     DONE -- 50 total match(es), 19 new today
+11:33:05  INFO     Report -> D:\Study\GITMASTER\Tools\JobSearch\hf_jobs_report.html
+10:40:45  INFO     ============================================================
+10:40:45  INFO     Singapore HF Job Tracker -- 2026-07-21 10:40
+10:40:45  INFO     Mode: Selenium (Chrome) | Funds: 20 | Keywords: 17
+10:40:45  INFO     ============================================================
+10:40:45  INFO     ====== WebDriver manager ======
+10:40:51  INFO     Get LATEST chromedriver version for google-chrome
+10:40:51  INFO     Get LATEST chromedriver version for google-chrome
+10:40:52  INFO     Get LATEST chromedriver version for google-chrome
+10:40:54  INFO     WebDriver version 150.0.7871.124 selected
+10:40:54  INFO     Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/150.0.7871.124/win32/chromedriver-win32.zip
+10:40:54  INFO     About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/150.0.7871.124/win32/chromedriver-win32.zip
+10:40:54  INFO     Driver downloading response is 200
+10:40:55  INFO     Get LATEST chromedriver version for google-chrome
+10:40:55  INFO     Driver has been saved in cache [C:\Users\priya\.wdm\drivers\chromedriver\win64\150.0.7871.124]
+10:40:57  INFO     Scanning Citadel                            
+10:41:06  INFO       -> 9 match(es) [found]
+10:41:08  INFO     Scanning Millennium Management              
+10:41:20  INFO       -> 0 match(es) [none]
+10:41:22  INFO     Scanning Point72                            
+10:41:30  INFO       -> 0 match(es) [none]
+10:41:32  INFO     Scanning Balyasny Asset Management          
+10:41:42  WARNING  Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)': /session/8c83b860de102b7eb456b34900d35bba
+10:41:47  INFO     ============================================================
+10:41:47  INFO     Singapore HF Job Tracker -- 2026-07-21 10:41
+10:41:47  INFO     Mode: Selenium (Chrome) | Funds: 20 | Keywords: 14
+10:41:47  INFO     ============================================================
+10:41:47  INFO     ====== WebDriver manager ======
+10:41:50  INFO     Get LATEST chromedriver version for google-chrome
+10:41:51  INFO     Get LATEST chromedriver version for google-chrome
+10:41:51  INFO     Driver [C:\Users\priya\.wdm\drivers\chromedriver\win64\150.0.7871.124\chromedriver-win32/chromedriver.exe] found in cache
+10:41:53  INFO     Scanning Citadel                            
+10:42:01  INFO       -> 9 match(es) [found]
+10:42:03  INFO     Scanning Millennium Management              
+10:42:13  INFO       -> 0 match(es) [none]
+10:42:15  INFO     Scanning Point72                            
+10:42:22  INFO       -> 0 match(es) [none]
+10:42:24  INFO     Scanning Balyasny Asset Management          
+10:42:32  INFO       -> 2 match(es) [found]
+10:42:34  INFO     Scanning Two Sigma                          
+10:42:45  INFO       -> 0 match(es) [none]
+10:42:47  INFO     Scanning Man Group                          
+10:42:58  INFO       -> 0 match(es) [none]
+10:43:00  INFO     Scanning Schonfeld Strategic Advisors       
+10:43:08  INFO       -> 6 match(es) [found]
+10:43:10  INFO     Scanning ExodusPoint Capital                
+10:43:16  INFO       -> 0 match(es) [none]
+10:43:18  INFO     Scanning Dymon Asia Capital                 
+10:43:26  INFO       -> 0 match(es) [none]
+10:43:28  INFO     Scanning Quantedge Capital                  
+10:43:38  INFO       -> 0 match(es) [none]
+10:43:40  INFO     Scanning Crescent Asset Management          
+10:43:48  INFO       -> 0 match(es) [none]
+10:43:50  INFO     Scanning Southern Ridges Capital            
+10:43:57  INFO       -> 0 match(es) [none]
+10:43:59  INFO     Scanning Bridgewater Associates             
+10:44:12  INFO       -> 0 match(es) [none]
+10:44:14  INFO     Scanning Winton Group                       
+10:44:22  INFO       -> 0 match(es) [none]
+10:44:24  INFO     Scanning WorldQuant                         
+10:44:31  INFO       -> 0 match(es) [none]
+10:44:33  INFO     Scanning Squarepoint Capital                
+10:44:42  INFO       -> 18 match(es) [found]
+10:44:44  INFO     Scanning Nine mile                          
+10:45:15  INFO       -> 2 match(es) [found]
+10:45:17  INFO     Scanning Jump trading                       
+10:45:25  INFO       -> 4 match(es) [found]
+10:45:27  INFO     Scanning SIG                                
+10:45:46  INFO       -> 5 match(es) [found]
+10:45:48  INFO     Scanning Optiver                            
+10:45:57  INFO       -> 4 match(es) [found]
+10:46:01  INFO     ============================================================
+10:46:01  INFO     DONE -- 50 total match(es), 3 new today
+10:46:01  INFO     Report -> D:\Study\GITMASTER\Tools\JobSearch\hf_jobs_report.html

@@ -1,0 +1,628 @@
+[
+  {
+    "name": "Citadel",
+    "careers_url": "https://www.citadel.com/careers/open-opportunities/",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "Filter results by Singapore on the page"
+  },
+  {
+    "name": "Citadel Securities",
+    "careers_url": "https://www.citadelsecurities.com/careers/open-opportunities/",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "NEW - separate entity from Citadel LLC with its own job board. Strong SG/HK tech-support hiring. VERIFY URL"
+  },
+  {
+    "name": "Millennium Management",
+    "careers_url": "https://career.mlp.com/careers?pid=755953779776&domain=mlp.com&sort_by=relevance",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "SG roles also appear on LinkedIn; check both"
+  },
+  {
+    "name": "Point72",
+    "careers_url": "https://careers.point72.com/CSJobDetail?jobName=all-open-positions&jobCode=ALL",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "Filter Location: Singapore after page loads. ~100 staff in SG"
+  },
+  {
+    "name": "Balyasny Asset Management",
+    "careers_url": "https://bambusdev.my.site.com/s/",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "Singapore roles also on LinkedIn"
+  },
+  {
+    "name": "Two Sigma",
+    "careers_url": "https://careers.twosigma.com/careers/OpenRoles",
+    "region": "SG, HK",
+    "category": "Systematic",
+    "notes": "Search 'support' and filter by Singapore"
+  },
+  {
+    "name": "Man Group",
+    "careers_url": "https://www.man.com/careers",
+    "region": "SG, HK",
+    "category": "Systematic / multi-strategy",
+    "notes": "Filter by Singapore; covers Man AHL and Man GLG"
+  },
+  {
+    "name": "Schonfeld Strategic Advisors",
+    "careers_url": "https://www.schonfeld.com/careers/",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "Singapore roles also on LinkedIn"
+  },
+  {
+    "name": "ExodusPoint Capital",
+    "careers_url": "https://job-boards.greenhouse.io/exoduspoint",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "LinkedIn recommended as primary backup. Absorbed most of Ovata Capital's HK team mid-2026 - expanding APAC headcount"
+  },
+  {
+    "name": "Dymon Asia Capital",
+    "careers_url": "https://www.dymonasia.com/join-us/",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "Very active hirer 2025-26; also posts on LinkedIn. Singapore-HQ, multi-strategy/commodities focus. Hired ~19 PMs / ~100 staff in a single year; opened Dubai office"
+  },
+  {
+    "name": "Quantedge Capital",
+    "careers_url": "https://www.quantedge.com/careers/",
+    "region": "SG",
+    "category": "Systematic macro",
+    "notes": "Small lean team; roles are selective. Singapore-HQ systematic/global macro, ~US$6B AUM"
+  },
+  {
+    "name": "Crescent Asset Management",
+    "careers_url": "https://www.linkedin.com/company/crescent-asset-management/jobs/",
+    "region": "SG",
+    "category": "Hedge fund",
+    "notes": "No public careers page -- LinkedIn is only channel"
+  },
+  {
+    "name": "Southern Ridges Capital",
+    "careers_url": "https://www.linkedin.com/company/southern-ridges-capital/jobs/",
+    "region": "SG",
+    "category": "Macro",
+    "notes": "New fund (2022); LinkedIn is primary channel"
+  },
+  {
+    "name": "Bridgewater Associates",
+    "careers_url": "https://www.bridgewater.com/careers/",
+    "region": "SG",
+    "category": "Macro",
+    "notes": "SG roles rare; check APAC listings. Singapore office opened 2022"
+  },
+  {
+    "name": "Winton Group",
+    "careers_url": "https://www.winton.com/opportunities",
+    "region": "HK",
+    "category": "Systematic",
+    "notes": "Check Technology and Operations sections"
+  },
+  {
+    "name": "WorldQuant",
+    "careers_url": "https://www.worldquant.com/career-listing/",
+    "region": "SG, HK",
+    "category": "Systematic",
+    "notes": "Filter by Singapore on the listings page"
+  },
+  {
+    "name": "Squarepoint Capital",
+    "careers_url": "https://www.squarepoint-capital.com/open-opportunities",
+    "region": "SG, HK",
+    "category": "Systematic",
+    "notes": "Check Technology and Operations categories"
+  },
+  {
+    "name": "Nine Mile Financial",
+    "careers_url": "https://www.nmftrading.com/job-category/technology/",
+    "region": "SG",
+    "category": "Prop trading",
+    "notes": "Check Technology and Operations categories. (Name corrected from 'Nine mile')"
+  },
+  {
+    "name": "Jump Trading",
+    "careers_url": "https://www.jumptrading.com/hr/experienced-candidates/",
+    "region": "SG, HK",
+    "category": "Prop trading",
+    "notes": "Check Technology and Operations categories"
+  },
+  {
+    "name": "SIG (Susquehanna)",
+    "careers_url": "https://careers.sig.com/global-experienced/jobs?tags1=Technology%20-%20Infrastructure,%20Support%20%2B%20Engineering&page=1&limit=100",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "Check Technology and Operations categories"
+  },
+  {
+    "name": "Optiver",
+    "careers_url": "https://www.optiver.com/join-us/jobs/?department=technology&level=experienced",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "Check Technology and Operations categories. HK office page: https://www.optiver.com/join-us/locations/hong-kong/"
+  },
+  {
+    "name": "Gordian Capital",
+    "careers_url": "https://gordian-capital.com/",
+    "region": "SG",
+    "category": "Fund platform",
+    "notes": "Singapore-HQ institutional fund platform (largest by AUM among SG-based ~$15B); hires via LinkedIn / direct contact. Strong ops/middle-office activity"
+  },
+  {
+    "name": "Arisaig Partners",
+    "careers_url": "https://arisaig.com/",
+    "region": "SG",
+    "category": "EM long-only / L-S",
+    "notes": "Singapore-HQ emerging markets / Asian consumer focus (~$5-6B AUM). Check LinkedIn for openings; investor relations contact available"
+  },
+  {
+    "name": "Avanda Investment Management",
+    "careers_url": "https://www.avanda.sg/",
+    "region": "SG",
+    "category": "Multi-asset",
+    "notes": "Singapore-HQ multi-strategy / multi-asset (~$5B AUM range). Founded by ex-GIC leadership. LinkedIn / enquiry@avanda.sg for roles"
+  },
+  {
+    "name": "Keystone Investors",
+    "careers_url": "https://keystone-investors.com/",
+    "region": "SG",
+    "category": "Long/short equity",
+    "notes": "Singapore-HQ fundamental long/short equity. Spun out of Schonfeld 2022; ~$6B and +63% in H1 2026 - one of the best performers in Asia. Email careers@keystone-investors.com"
+  },
+  {
+    "name": "APS Asset Management",
+    "careers_url": "https://www.linkedin.com/company/aps-asset-management/jobs/",
+    "region": "SG",
+    "category": "Long/short equity",
+    "notes": "Singapore-based long/short. Limited public careers page -- LinkedIn primary"
+  },
+  {
+    "name": "Lumiere Capital",
+    "careers_url": "https://lumiere-capital.com/",
+    "region": "SG",
+    "category": "Value equity",
+    "notes": "Singapore-based value / Asia equity long-term focus. Small team; LinkedIn or direct outreach"
+  },
+  {
+    "name": "D. E. Shaw",
+    "careers_url": "https://www.deshaw.com/careers",
+    "region": "SG, HK",
+    "category": "Systematic / multi-strategy",
+    "notes": "Has Singapore presence (MAS-licensed entity). Filter global roles for APAC/Singapore"
+  },
+
+  {
+    "name": "Jane Street",
+    "careers_url": "https://www.janestreet.com/join-jane-street/open-roles/",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "NEW - HIGH PRIORITY. Actively hiring SG/HK for Production Engineer/SRE, IT Operations Engineer, Linux Engineer, Network Engineer, Unified Communications Engineer. Best direct fit for a production support profile in the whole list"
+  },
+  {
+    "name": "Hudson River Trading",
+    "careers_url": "https://www.hudsonrivertrading.com/careers/",
+    "region": "SG",
+    "category": "Prop trading",
+    "notes": "NEW - Singapore office. Electronic Trading Support / TradeOps roles. VERIFY URL"
+  },
+  {
+    "name": "DRW",
+    "careers_url": "https://drw.com/work-at-drw/open-positions/",
+    "region": "SG",
+    "category": "Prop trading",
+    "notes": "NEW - Singapore office. Trade Support Engineer roles. VERIFY URL"
+  },
+  {
+    "name": "IMC Trading",
+    "careers_url": "https://www.imc.com/ap/search-careers",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "NEW - APAC careers portal covers HK, SG, Sydney, Mumbai. Good tech-ops hiring"
+  },
+  {
+    "name": "Eclipse Trading",
+    "careers_url": "https://www.eclipsetrading.com/careers/",
+    "region": "HK",
+    "category": "Prop trading",
+    "notes": "NEW - Hong Kong HQ, ~120 staff, equity derivatives/delta one/ETF/crypto. Greenhouse board: https://job-boards.greenhouse.io/eclipsetrading. Has an IT Operations team"
+  },
+  {
+    "name": "Tower Research Capital",
+    "careers_url": "https://www.tower-research.com/open-positions/",
+    "region": "SG, HK",
+    "category": "Prop trading",
+    "notes": "NEW - SG and HK offices. VERIFY URL"
+  },
+  {
+    "name": "Flow Traders",
+    "careers_url": "https://www.flowtraders.com/careers",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "NEW - Singapore is the APAC hub; ETP market making. VERIFY URL"
+  },
+  {
+    "name": "Virtu Financial",
+    "careers_url": "https://www.virtu.com/careers/",
+    "region": "SG, HK",
+    "category": "Market maker",
+    "notes": "NEW - SG and HK offices. Public company, good ops/support headcount. VERIFY URL"
+  },
+  {
+    "name": "XTX Markets",
+    "careers_url": "https://www.xtxmarkets.com/careers/",
+    "region": "SG",
+    "category": "Market maker",
+    "notes": "NEW - Singapore office, ML-driven market making. VERIFY URL"
+  },
+  {
+    "name": "Maven Securities",
+    "careers_url": "https://www.mavensecurities.com/careers/",
+    "region": "HK, SG",
+    "category": "Prop trading",
+    "notes": "NEW - Hong Kong office. VERIFY URL"
+  },
+  {
+    "name": "Vivienne Court Trading",
+    "careers_url": "https://www.viviennecourt.com/",
+    "region": "HK",
+    "category": "Prop trading",
+    "notes": "NEW - Hong Kong presence, Sydney HQ. Small; LinkedIn is likely primary. VERIFY URL"
+  },
+  {
+    "name": "Grasshopper Asia",
+    "careers_url": "https://grasshopperasia.com/careers/",
+    "region": "SG",
+    "category": "Prop trading",
+    "notes": "NEW - Singapore-HQ prop firm. VERIFY URL"
+  },
+  {
+    "name": "Wintermute",
+    "careers_url": "https://www.wintermute.com/careers",
+    "region": "SG",
+    "category": "Crypto market maker",
+    "notes": "NEW - Singapore presence. Crypto/digital assets market making. VERIFY URL"
+  },
+  {
+    "name": "QCP Capital",
+    "careers_url": "https://www.qcp.capital/careers",
+    "region": "SG",
+    "category": "Crypto trading",
+    "notes": "NEW - Singapore-HQ digital asset trading firm. VERIFY URL"
+  },
+
+  {
+    "name": "Brevan Howard",
+    "careers_url": "https://wd3.myworkdaysite.com/recruiting/brevanhoward/BH_ExternalCareers",
+    "region": "SG, HK",
+    "category": "Global macro",
+    "notes": "NEW - HIGH PRIORITY. Workday board, filter by Singapore/Hong Kong. Large SG office at Suntec City; Minal Bathwal runs ~$5.5B from Singapore. Strong rates/FX/derivatives ops and tech support hiring - excellent match for a fixed-income production support background"
+  },
+  {
+    "name": "Jain Global",
+    "careers_url": "https://www.jainglobal.com/careers",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - Bobby Jain's fund. ~75 APAC staff, 60% in HK; expanding HK office by 50% in early 2027 and hiring into Asia now. Regional CIO based in Singapore. VERIFY URL"
+  },
+  {
+    "name": "Arrowpoint Investment Partners",
+    "careers_url": "https://www.linkedin.com/company/arrowpoint-investment-partners/jobs/",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - HIGH PRIORITY. Singapore-HQ, founded by ex-Millennium Asia co-CEO Jonathan Xiong. Grew from $0.5B (2024) to ~$2B; 140 staff heading to ~190; trading teams going 20 to 30. Offices SG/HK/Dubai. One of the most aggressive hirers in Singapore right now"
+  },
+  {
+    "name": "Capula Investment Management",
+    "careers_url": "https://www.capulaglobal.com/careers",
+    "region": "SG, HK",
+    "category": "Fixed income RV / macro",
+    "notes": "NEW - ~$30B fixed-income relative value. Strong SG presence. Directly relevant to a Fixed Income production support background. VERIFY URL"
+  },
+  {
+    "name": "Marshall Wace",
+    "careers_url": "https://www.mwam.com/careers/",
+    "region": "SG, HK",
+    "category": "Long/short equity / systematic",
+    "notes": "NEW - HK and SG offices, TOPS systematic platform. VERIFY URL"
+  },
+  {
+    "name": "Eisler Capital",
+    "careers_url": "https://www.eislercapital.com/careers",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - SG/HK presence. CAUTION: press reports in early 2026 of significant outflows and PM departures - check firm health before applying. VERIFY URL"
+  },
+  {
+    "name": "Verition Fund Management",
+    "careers_url": "https://www.verition.com/careers",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - expanding APAC multi-strat. VERIFY URL"
+  },
+  {
+    "name": "Walleye Capital",
+    "careers_url": "https://www.walleyecapital.com/careers",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - building out Asia. VERIFY URL"
+  },
+  {
+    "name": "Hudson Bay Capital",
+    "careers_url": "https://www.hudsonbaycapital.com/careers",
+    "region": "SG, HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - Asia expansion. VERIFY URL"
+  },
+  {
+    "name": "Tudor Investment Corporation",
+    "careers_url": "https://www.tudor.com/careers",
+    "region": "SG",
+    "category": "Global macro",
+    "notes": "NEW - Singapore office. VERIFY URL"
+  },
+  {
+    "name": "Alphadyne Asset Management",
+    "careers_url": "https://www.alphadyne.com/careers",
+    "region": "SG",
+    "category": "Fixed income RV / macro",
+    "notes": "NEW - ~$10B+ global fixed income RV and macro; NY/London/Singapore. Strong fit for rates/FX product knowledge. VERIFY URL"
+  },
+  {
+    "name": "AQR Capital Management",
+    "careers_url": "https://careers.aqr.com/",
+    "region": "SG, HK",
+    "category": "Systematic",
+    "notes": "NEW - APAC roles via global board. VERIFY URL"
+  },
+  {
+    "name": "Rokos Capital Management",
+    "careers_url": "https://www.rokoscapital.com/careers",
+    "region": "SG",
+    "category": "Global macro",
+    "notes": "NEW - Singapore presence; ~$16B macro. VERIFY URL"
+  },
+  {
+    "name": "FengHe Fund Management",
+    "careers_url": "https://www.linkedin.com/company/fenghe-fund-management/jobs/",
+    "region": "SG, HK",
+    "category": "Long/short equity",
+    "notes": "NEW - Singapore-HQ, ~US$9-11B, +29% H1 2026, only one down year since 2012. Opening a Hong Kong office (Two IFC) in H2 2026 and hiring across Asia. Low public careers presence - LinkedIn / direct outreach"
+  },
+  {
+    "name": "Modular Asset Management",
+    "careers_url": "https://www.linkedin.com/company/modular-asset-management/jobs/",
+    "region": "SG",
+    "category": "Macro / RV",
+    "notes": "NEW - Singapore-HQ macro fund founded by ex-Millennium/BlueCrest people. LinkedIn primary"
+  },
+  {
+    "name": "Asia Genesis Asset Management",
+    "careers_url": "https://www.linkedin.com/company/asia-genesis-asset-management/jobs/",
+    "region": "SG",
+    "category": "Macro",
+    "notes": "NEW - Singapore-based. NOTE: shut its flagship macro fund in Jan 2024 after losses; verify current status before applying"
+  },
+  {
+    "name": "Broad Peak Investment Advisers",
+    "careers_url": "https://www.broadpeakim.com/",
+    "region": "SG",
+    "category": "Credit / special situations",
+    "notes": "NEW - Singapore-HQ, Temasek-seeded Asian credit and special situations. Small team; direct outreach. VERIFY URL"
+  },
+  {
+    "name": "Vulpes Investment Management",
+    "careers_url": "https://www.vulpesinvest.com/",
+    "region": "SG",
+    "category": "Multi-strategy",
+    "notes": "NEW - Singapore-based boutique. VERIFY URL"
+  },
+  {
+    "name": "North Rock Capital",
+    "careers_url": "https://www.linkedin.com/company/north-rock-capital/jobs/",
+    "region": "SG, HK",
+    "category": "Equity multi-manager",
+    "notes": "NEW - ~$5B US equity-focused multi-manager. Opened HK 2023, Singapore 2024 with MAS CMS licence application. LinkedIn primary"
+  },
+  {
+    "name": "Hillhouse Investment",
+    "careers_url": "https://www.hillhouseinvestment.com/careers",
+    "region": "HK, SG",
+    "category": "Multi-strategy / PE",
+    "notes": "NEW - one of the largest Asian managers (~$19B hedge fund AUM). HK and SG offices. VERIFY URL"
+  },
+
+  {
+    "name": "Symmetry Investments",
+    "careers_url": "https://jobs.sunrise.io/symmetry",
+    "region": "HK, SG",
+    "category": "Multi-strategy",
+    "notes": "NEW - HIGH PRIORITY. Largest HK-headquartered hedge fund (~$36B AUM). Offices in HK, Singapore, London, Jersey, Cayman. Spun off from a major NY hedge fund in 2014"
+  },
+  {
+    "name": "BFAM Partners",
+    "careers_url": "https://www.bfam-partners.com/en/careers",
+    "region": "HK",
+    "category": "Credit / multi-strategy",
+    "notes": "NEW - HK-HQ, ~$19B, Asian credit / volatility / rates / convertibles. Also posts on Workable: https://apply.workable.com/bfam-partners/. Explicitly recruits non-investment (ops/tech) roles"
+  },
+  {
+    "name": "PAG",
+    "careers_url": "https://www.pag.com/en/careers",
+    "region": "HK, SG",
+    "category": "Alternatives (HF/PE/RE)",
+    "notes": "NEW - HK-HQ Asia-focused alternatives manager with a large absolute-return arm. Note: careers page uses a browser verification check - Selenium may need a wait/retry"
+  },
+  {
+    "name": "Polymer Capital Management",
+    "careers_url": "https://polymercapital.freshteam.com/jobs",
+    "region": "HK, SG",
+    "category": "Equity multi-manager",
+    "notes": "NEW - HIGH PRIORITY. Asia-focused multi-manager platform, offices in HK, Singapore, Shanghai, Taipei, Tokyo, NY. Freshteam board typically carries ~30+ live roles including tech/ops. Bloomberg data/tech partnership means a real internal platform team"
+  },
+  {
+    "name": "Pinpoint Asset Management",
+    "careers_url": "https://www.linkedin.com/company/pinpoint-asset-management/jobs/",
+    "region": "HK, SG",
+    "category": "Multi-strategy",
+    "notes": "NEW - HK-HQ Asia multi-strategy platform. LinkedIn primary"
+  },
+  {
+    "name": "Infini Capital Management",
+    "careers_url": "https://www.linkedin.com/company/infini-capital-management/jobs/",
+    "region": "HK",
+    "category": "Multi-manager",
+    "notes": "NEW - HK multi-manager founded by Tony Chin. Has been hiring senior non-investment staff (risk, CFO, GC) from Pinpoint, Dymon and BFAM. LinkedIn primary"
+  },
+  {
+    "name": "Aspex Management",
+    "careers_url": "https://aspexmanagement.com/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - HK-HQ pan-Asian public and private equity, founded 2018. No dedicated careers page found - check LinkedIn / direct contact"
+  },
+  {
+    "name": "Tybourne Capital Management",
+    "careers_url": "https://tybournecapital.com/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - HK-HQ Tiger Cub descendant (ex-Lone Pine Asia head). ~$8B. Small team; direct outreach"
+  },
+  {
+    "name": "Oasis Management",
+    "careers_url": "https://www.oasiscm.com/",
+    "region": "HK",
+    "category": "Activist / event-driven",
+    "notes": "NEW - HK-based activist fund, well known in Japan. VERIFY URL"
+  },
+  {
+    "name": "Janchor Partners",
+    "careers_url": "https://www.janchorpartners.com/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - established HK long/short shop. VERIFY URL"
+  },
+  {
+    "name": "Anatole Investment Management",
+    "careers_url": "https://www.linkedin.com/company/anatole-investment-management/jobs/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - HK China-focused long/short. LinkedIn primary"
+  },
+  {
+    "name": "Snow Lake Capital",
+    "careers_url": "https://www.linkedin.com/company/snow-lake-capital/jobs/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - HK China-focused. LinkedIn primary"
+  },
+  {
+    "name": "Nine Masts Capital",
+    "careers_url": "https://www.ninemasts.com/",
+    "region": "HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - HK multi-strategy / convertible arb. VERIFY URL"
+  },
+  {
+    "name": "Ward Ferry Management",
+    "careers_url": "https://www.wardferry.com.hk/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - long-established HK Asia equity fund. VERIFY URL"
+  },
+  {
+    "name": "Value Partners Group",
+    "careers_url": "https://www.valuepartners-group.com/en/careers/",
+    "region": "HK, SG",
+    "category": "Value equity / asset manager",
+    "notes": "NEW - HKEX-listed (806.HK), first listed asset manager in HK. Offices incl. Singapore. Larger corporate structure means more middle/back-office and IT roles than a boutique. VERIFY URL"
+  },
+  {
+    "name": "Myriad Asset Management",
+    "careers_url": "https://www.myriadasset.com/",
+    "region": "HK",
+    "category": "Macro",
+    "notes": "NEW - Carl Huttenlocher's firm. Original Asia multi-strat returned capital in 2023; relaunched 2025 as Myriad Macro plus an ETF. Small - direct outreach"
+  },
+  {
+    "name": "LMR Partners",
+    "careers_url": "https://www.lmrpartners.com/careers",
+    "region": "HK",
+    "category": "Multi-strategy",
+    "notes": "NEW - HK office, systematic and discretionary multi-strategy. VERIFY URL"
+  },
+  {
+    "name": "Sylebra Capital",
+    "careers_url": "https://www.linkedin.com/company/sylebra-capital/jobs/",
+    "region": "HK",
+    "category": "Long/short equity (tech)",
+    "notes": "NEW - HK tech-focused long/short. LinkedIn primary"
+  },
+  {
+    "name": "Triata Capital",
+    "careers_url": "https://www.linkedin.com/company/triata-capital/jobs/",
+    "region": "HK",
+    "category": "Long/short equity (tech)",
+    "notes": "NEW - HK China tech long/short, AI-assisted research process. LinkedIn primary"
+  },
+  {
+    "name": "Trivest Advisors",
+    "careers_url": "https://www.linkedin.com/company/trivest-advisors/jobs/",
+    "region": "HK",
+    "category": "China equity",
+    "notes": "NEW - very secretive HK firm; TAL China Focus returned ~95% in H1 2026, best-performing fund globally. Almost no public hiring channel - LinkedIn / network only"
+  },
+  {
+    "name": "Greenwoods Asset Management",
+    "careers_url": "https://www.linkedin.com/company/greenwoods-asset-management/jobs/",
+    "region": "HK",
+    "category": "China equity",
+    "notes": "NEW - HK/Shanghai China-focused. LinkedIn primary"
+  },
+  {
+    "name": "Asia Research and Capital Management (ARCM)",
+    "careers_url": "https://www.arcm.com/",
+    "region": "HK",
+    "category": "Credit / event-driven",
+    "notes": "NEW - HK-based, ~$3B+. VERIFY URL"
+  },
+  {
+    "name": "Hel Ved Capital",
+    "careers_url": "https://www.linkedin.com/company/hel-ved-capital-management/jobs/",
+    "region": "HK",
+    "category": "Macro / RV",
+    "notes": "NEW - HK macro fund founded by ex-Citadel/Millennium traders. LinkedIn primary"
+  },
+  {
+    "name": "Tenucia Partners",
+    "careers_url": "https://www.linkedin.com/company/tenucia-partners/jobs/",
+    "region": "HK",
+    "category": "Long/short equity",
+    "notes": "NEW - 2026 launch by an ex-Aspex partner; ~$100M founder capital, Japan/China/Asia L/S. Early-stage funds hire ops and tech generalists - worth tracking. LinkedIn primary"
+  },
+  {
+    "name": "Zeal Asset Management",
+    "careers_url": "https://www.zealasset.com/",
+    "region": "HK",
+    "category": "Asia equity",
+    "notes": "NEW - HK boutique. VERIFY URL"
+  },
+  {
+    "name": "Segantii Capital Management",
+    "careers_url": "https://www.segantii.com/",
+    "region": "HK",
+    "category": "Multi-strategy (WOUND DOWN)",
+    "notes": "REFERENCE ONLY - returned outside capital in 2024 following HK insider dealing charges. Do not include in active scanning; kept here so the name is recognised if it reappears"
+  },
+  {
+    "name": "Ovata Capital Management",
+    "careers_url": "https://www.ovatacapital.com/",
+    "region": "HK",
+    "category": "Multi-strategy (WINDING DOWN)",
+    "notes": "REFERENCE ONLY - winding down mid-2026; most of the investment team absorbed by ExodusPoint. Track ExodusPoint HK instead"
+  }
+]
