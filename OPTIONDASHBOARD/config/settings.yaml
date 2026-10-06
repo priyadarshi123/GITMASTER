@@ -1,0 +1,73 @@
+# App settings. Secrets (Angel One keys) go in ../.env, never here.
+
+data:
+  provider: auto          # auto = Angel One if .env is filled in, else Yahoo | angel | yahoo
+  history_years: 5        # daily candles kept per symbol (S/R 5Y view needs 5)
+
+signals:
+  rsi_period: 14
+  bearish_below: 40       # both weekly & daily RSI below -> Bear Call
+  bullish_above: 60       # both above -> Bull Put; both in between -> Iron Condor
+
+refresh:
+  auto_interval_min: 15   # 0 = manual "Refresh now" button only
+  min_gap_sec: 120        # manual refresh within this gap returns cached data
+  market_open: "09:15"
+  market_close: "15:30"
+  post_close_refresh: true  # one extra refresh after close to capture final candles
+
+# Sector -> NSE index shown in the analysis page's "Sector context" chart.
+# Names as listed on nseindia.com (Market Data > Indices).
+sector_indices:
+  Index: NIFTY 50
+  Oil & Gas: NIFTY OIL & GAS
+  Banking: NIFTY BANK
+  Telecom: NIFTY SERVICES SECTOR
+  IT: NIFTY IT
+  FMCG: NIFTY FMCG
+  NBFC: NIFTY FINANCIAL SERVICES EX-BANK
+  Infrastructure: NIFTY INFRASTRUCTURE
+  Pharma: NIFTY PHARMA
+  Auto: NIFTY AUTO
+  Cement: NIFTY CEMENT
+  Consumer: NIFTY CONSUMER DURABLES
+  Power: NIFTY ENERGY
+  Metals: NIFTY METAL
+  Mining: NIFTY COMMODITIES
+  Healthcare: NIFTY HEALTHCARE INDEX
+  Insurance: NIFTY FINANCIAL SERVICES EX-BANK
+  Defence: NIFTY INDIA DEFENCE
+  Retail: NIFTY INDIA CONSUMPTION
+
+events:
+  enabled: true           # NSE corporate calendar (results, AGM, dividend, bonus/split)
+
+options:
+  risk_free_rate: 0.065   # for Black-Scholes Greeks / POP
+  chain_cache_sec: 60     # reuse a fetched NSE chain for this long
+  strikes_each_side: 15   # chain rows shown around ATM (more on demand)
+  # margin estimate when no broker API: naked short = (span + exposure)% of notional,
+  # hedged spread = max loss + buffer (whichever is lower)
+  margin:
+    span_pct_stock: 18
+    exposure_pct_stock: 3.5
+    span_pct_index: 9
+    exposure_pct_index: 2
+    hedged_buffer_pct: 10
+
+alerts:                   # Telegram — bot token + chat id go in ../.env
+  enabled: false          # set true once the Alerts page "Send test" works
+  summary_times: ["09:20", "15:35"]   # weekdays; skipped if the app was off for 30+ min past the time
+  stop_levels: [95, 100]  # % of stop used; each level alerts once, re-arms 10 points below
+  stop_check_min: 5       # how often stops are checked during market hours
+  books: [real, paper]
+  include_signals: true   # add the signal grid (Bear Call / Bull Put / Iron Condor) to summaries
+
+capital:
+  default: 100000         # INR
+  margin_cap_pct: 20      # max margin per position as % of capital
+  risk_per_trade_pct: 1
+
+server:
+  host: 127.0.0.1         # use 0.0.0.0 on the VPS (behind nginx)
+  port: 8050

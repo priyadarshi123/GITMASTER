@@ -1,18 +1,18 @@
 {
   "AQR Capital Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:32",
-    "last_ok": "2026-08-19 14:32"
+    "last_checked": "2026-09-23 23:28",
+    "last_ok": "2026-09-23 23:28"
   },
   "Alphadyne Asset Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:26",
-    "last_ok": "2026-08-19 14:26"
+    "last_checked": "2026-09-23 23:23",
+    "last_ok": "2026-09-23 23:23"
   },
   "Arisaig Partners": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:27",
-    "last_ok": "2026-08-19 14:27"
+    "last_checked": "2026-09-23 23:25",
+    "last_ok": "2026-09-23 23:25"
   },
   "Asia Research and Capital Management": {
     "fails": 0,
@@ -26,8 +26,8 @@
   },
   "Avanda Investment Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:27",
-    "last_ok": "2026-08-19 14:27"
+    "last_checked": "2026-09-23 23:26",
+    "last_ok": "2026-09-23 23:26"
   },
   "BFAM Partners": {
     "fails": 0,
@@ -36,53 +36,53 @@
   },
   "Balyasny Asset Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:21",
+    "last_ok": "2026-09-23 23:21"
   },
   "Brevan Howard": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:25",
-    "last_ok": "2026-08-19 14:25"
+    "last_checked": "2026-09-23 23:23",
+    "last_ok": "2026-09-23 23:23"
   },
   "Bridgewater Associates": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:26",
-    "last_ok": "2026-08-19 14:26"
+    "last_checked": "2026-09-23 23:24",
+    "last_ok": "2026-09-23 23:24"
   },
   "Broad Peak Investment Advisers": {
-    "fails": 1,
-    "last_checked": "2026-08-19 14:28",
+    "fails": 2,
+    "last_checked": "2026-09-23 23:26",
     "last_ok": null
   },
   "Capula Investment Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:25",
-    "last_ok": "2026-08-19 14:25"
+    "last_checked": "2026-09-23 23:23",
+    "last_ok": "2026-09-23 23:23"
   },
   "Citadel": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:23",
-    "last_ok": "2026-08-19 14:23"
+    "last_checked": "2026-09-23 23:20",
+    "last_ok": "2026-09-23 23:20"
   },
   "Citadel Securities": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:23",
-    "last_ok": "2026-08-19 14:23"
+    "last_checked": "2026-09-23 23:20",
+    "last_ok": "2026-09-23 23:20"
   },
   "D. E. Shaw": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:32",
-    "last_ok": "2026-08-19 14:32"
+    "last_checked": "2026-09-23 23:28",
+    "last_ok": "2026-09-23 23:28"
   },
   "DRW": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:33",
-    "last_ok": "2026-08-19 14:33"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "Dymon Asia Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:26",
-    "last_ok": "2026-08-19 14:26"
+    "last_checked": "2026-09-23 23:24",
+    "last_ok": "2026-09-23 23:24"
   },
   "Eclipse Trading": {
     "fails": 0,
@@ -90,54 +90,54 @@
     "last_ok": "2026-08-19 14:34"
   },
   "Eisler Capital": {
-    "fails": 1,
-    "last_checked": "2026-08-19 14:25",
+    "fails": 2,
+    "last_checked": "2026-09-23 23:22",
     "last_ok": null
   },
   "ExodusPoint Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:21",
+    "last_ok": "2026-09-23 23:21"
   },
   "Flow Traders": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:34",
-    "last_ok": "2026-08-19 14:34"
+    "last_checked": "2026-09-23 23:30",
+    "last_ok": "2026-09-23 23:30"
   },
   "Gordian Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:27",
-    "last_ok": "2026-08-19 14:27"
+    "last_checked": "2026-09-23 23:25",
+    "last_ok": "2026-09-23 23:25"
   },
   "Grasshopper Asia": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:36",
-    "last_ok": "2026-08-19 14:36"
+    "last_checked": "2026-09-23 23:31",
+    "last_ok": "2026-09-23 23:31"
   },
   "Hillhouse Investment": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:29",
-    "last_ok": "2026-08-19 14:29"
+    "last_checked": "2026-09-23 23:27",
+    "last_ok": "2026-09-23 23:27"
   },
   "Hudson Bay Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:25",
-    "last_ok": "2026-08-19 14:25"
+    "last_checked": "2026-09-23 23:22",
+    "last_ok": "2026-09-23 23:22"
   },
   "Hudson River Trading": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:33",
-    "last_ok": "2026-08-19 14:33"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "IMC Trading": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:34",
-    "last_ok": "2026-08-19 14:34"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "Jain Global": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:22",
+    "last_ok": "2026-09-23 23:22"
   },
   "Janchor Partners": {
     "fails": 0,
@@ -146,18 +146,18 @@
   },
   "Jane Street": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:33",
-    "last_ok": "2026-08-19 14:33"
+    "last_checked": "2026-09-23 23:28",
+    "last_ok": "2026-09-23 23:28"
   },
   "Jump Trading": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:33",
-    "last_ok": "2026-08-19 14:33"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "Keystone Investors": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:27",
-    "last_ok": "2026-08-19 14:27"
+    "last_checked": "2026-09-23 23:25",
+    "last_ok": "2026-09-23 23:25"
   },
   "LMR Partners": {
     "fails": 0,
@@ -166,23 +166,23 @@
   },
   "Lumiere Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:28",
-    "last_ok": "2026-08-19 14:28"
+    "last_checked": "2026-09-23 23:26",
+    "last_ok": "2026-09-23 23:26"
   },
   "Man Group": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:32",
-    "last_ok": "2026-08-19 14:32"
+    "last_checked": "2026-09-23 23:27",
+    "last_ok": "2026-09-23 23:27"
   },
   "Maven Securities": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:35",
-    "last_ok": "2026-08-19 14:35"
+    "last_checked": "2026-09-23 23:30",
+    "last_ok": "2026-09-23 23:30"
   },
   "Millennium Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:21",
+    "last_ok": "2026-09-23 23:21"
   },
   "Myriad Asset Management": {
     "fails": 0,
@@ -196,8 +196,8 @@
   },
   "Nine Mile Financial": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:35",
-    "last_ok": "2026-08-19 14:35"
+    "last_checked": "2026-09-23 23:31",
+    "last_ok": "2026-09-23 23:31"
   },
   "Oasis Management": {
     "fails": 0,
@@ -206,73 +206,73 @@
   },
   "Optiver": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:34",
-    "last_ok": "2026-08-19 14:34"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "PAG": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:29",
-    "last_ok": "2026-08-19 14:29"
+    "last_checked": "2026-09-23 23:27",
+    "last_ok": "2026-09-23 23:27"
   },
   "Point72": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:21",
+    "last_ok": "2026-09-23 23:21"
   },
   "Polymer Capital Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:29",
-    "last_ok": "2026-08-19 14:29"
+    "last_checked": "2026-09-23 23:26",
+    "last_ok": "2026-09-23 23:26"
   },
   "QCP Capital": {
-    "fails": 0,
-    "last_checked": "2026-08-19 14:36",
+    "fails": 1,
+    "last_checked": "2026-09-23 23:32",
     "last_ok": "2026-08-19 14:36"
   },
   "Quantedge Capital": {
-    "fails": 0,
-    "last_checked": "2026-08-19 14:27",
+    "fails": 1,
+    "last_checked": "2026-09-23 23:25",
     "last_ok": "2026-08-19 14:27"
   },
   "Rokos Capital Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:26",
-    "last_ok": "2026-08-19 14:26"
+    "last_checked": "2026-09-23 23:23",
+    "last_ok": "2026-09-23 23:23"
   },
   "SIG (Susquehanna)": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:33",
-    "last_ok": "2026-08-19 14:33"
+    "last_checked": "2026-09-23 23:29",
+    "last_ok": "2026-09-23 23:29"
   },
   "Schonfeld Strategic Advisors": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:24",
-    "last_ok": "2026-08-19 14:24"
+    "last_checked": "2026-09-23 23:21",
+    "last_ok": "2026-09-23 23:21"
   },
   "Squarepoint Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:32",
-    "last_ok": "2026-08-19 14:32"
+    "last_checked": "2026-09-23 23:28",
+    "last_ok": "2026-09-23 23:28"
   },
   "Symmetry Investments": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:29",
-    "last_ok": "2026-08-19 14:29"
+    "last_checked": "2026-09-23 23:26",
+    "last_ok": "2026-09-23 23:26"
   },
   "Tower Research Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:34",
-    "last_ok": "2026-08-19 14:34"
+    "last_checked": "2026-09-23 23:30",
+    "last_ok": "2026-09-23 23:30"
   },
   "Tudor Investment Corporation": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:26",
-    "last_ok": "2026-08-19 14:26"
+    "last_checked": "2026-09-23 23:23",
+    "last_ok": "2026-09-23 23:23"
   },
   "Two Sigma": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:31",
-    "last_ok": "2026-08-19 14:31"
+    "last_checked": "2026-09-23 23:27",
+    "last_ok": "2026-09-23 23:27"
   },
   "Tybourne Capital Management": {
     "fails": 0,
@@ -281,18 +281,18 @@
   },
   "Value Partners Group": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:29",
-    "last_ok": "2026-08-19 14:29"
+    "last_checked": "2026-09-23 23:27",
+    "last_ok": "2026-09-23 23:27"
   },
   "Verition Fund Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:25",
-    "last_ok": "2026-08-19 14:25"
+    "last_checked": "2026-09-23 23:22",
+    "last_ok": "2026-09-23 23:22"
   },
   "Virtu Financial": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:34",
-    "last_ok": "2026-08-19 14:34"
+    "last_checked": "2026-09-23 23:30",
+    "last_ok": "2026-09-23 23:30"
   },
   "Vivienne Court Trading": {
     "fails": 0,
@@ -301,13 +301,13 @@
   },
   "Vulpes Investment Management": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:28",
-    "last_ok": "2026-08-19 14:28"
+    "last_checked": "2026-09-23 23:26",
+    "last_ok": "2026-09-23 23:26"
   },
   "Walleye Capital": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:25",
-    "last_ok": "2026-08-19 14:25"
+    "last_checked": "2026-09-23 23:22",
+    "last_ok": "2026-09-23 23:22"
   },
   "Ward Ferry Management": {
     "fails": 0,
@@ -316,8 +316,8 @@
   },
   "Wintermute": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:36",
-    "last_ok": "2026-08-19 14:36"
+    "last_checked": "2026-09-23 23:31",
+    "last_ok": "2026-09-23 23:31"
   },
   "Winton Group": {
     "fails": 0,
@@ -326,13 +326,18 @@
   },
   "WorldQuant": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:32",
-    "last_ok": "2026-08-19 14:32"
+    "last_checked": "2026-09-23 23:28",
+    "last_ok": "2026-09-23 23:28"
+  },
+  "XTX Careers": {
+    "fails": 0,
+    "last_checked": "2026-09-23 23:24",
+    "last_ok": "2026-09-23 23:24"
   },
   "XTX Markets": {
     "fails": 0,
-    "last_checked": "2026-08-19 14:35",
-    "last_ok": "2026-08-19 14:35"
+    "last_checked": "2026-09-23 23:30",
+    "last_ok": "2026-09-23 23:30"
   },
   "Zeal Asset Management": {
     "fails": 0,

@@ -1,0 +1,74 @@
+# Symbols the dashboard tracks. Only `enabled` entries are fetched, so trimming
+# this list directly reduces API calls. Order = display rank (stocks are listed
+# roughly by Nifty 50 weight). Edits are picked up on the next refresh.
+#
+# Fields
+#   symbol       NSE symbol (as on NSE / Angel One, without -EQ)
+#   name         display name
+#   sector       sector chip on the dashboard
+#   enabled      false = skip entirely (default true)
+#   expiries     how many upcoming expiries to load in the option chain (default 1)
+#   yahoo        Yahoo Finance ticker (fallback data source; default <symbol>.NS)
+#   nse_index    NSE index name: history + quotes come from NSE instead of Yahoo
+#   angel_token  Angel One instrument token (only needed for indices; stocks are
+#                looked up automatically from Angel's instrument master)
+
+indices:
+  - { symbol: NIFTY,      name: Nifty 50,          sector: Index, enabled: true,  expiries: 2, yahoo: "^NSEI",                angel_token: "99926000" }
+  - { symbol: BANKNIFTY,  name: Nifty Bank,        sector: Index, enabled: true,  expiries: 1, yahoo: "^NSEBANK",             angel_token: "99926009" }
+  # Yahoo has no history for these two, so they come from NSE directly
+  - { symbol: FINNIFTY,   name: Nifty Fin Service,   sector: Index, enabled: true, expiries: 1, nse_index: NIFTY FINANCIAL SERVICES, angel_token: "99926037" }
+  - { symbol: MIDCPNIFTY, name: Nifty Midcap Select, sector: Index, enabled: true, expiries: 1, nse_index: NIFTY MIDCAP SELECT,      angel_token: "99926074" }
+
+stocks:
+  - { symbol: RELIANCE,   name: Reliance Industries,     sector: Oil & Gas }
+  - { symbol: HDFCBANK,   name: HDFC Bank,               sector: Banking }
+  - { symbol: BHARTIARTL, name: Bharti Airtel,           sector: Telecom }
+  - { symbol: ICICIBANK,  name: ICICI Bank,              sector: Banking }
+  - { symbol: SBIN,       name: State Bank of India,     sector: Banking }
+  - { symbol: TCS,        name: TCS,                     sector: IT }
+  - { symbol: ITC,        name: ITC,                     sector: FMCG }
+  - { symbol: BAJFINANCE, name: Bajaj Finance,           sector: NBFC }
+  - { symbol: LT,         name: Larsen & Toubro,         sector: Infrastructure }
+  - { symbol: HINDUNILVR, name: Hindustan Unilever,      sector: FMCG }
+  - { symbol: INFY,       name: Infosys,                 sector: IT }
+  - { symbol: SUNPHARMA,  name: Sun Pharmaceutical,      sector: Pharma }
+  - { symbol: ADANIPORTS, name: Adani Ports,             sector: Infrastructure }
+  - { symbol: MARUTI,     name: Maruti Suzuki,           sector: Auto }
+  - { symbol: KOTAKBANK,  name: Kotak Mahindra Bank,     sector: Banking }
+  - { symbol: AXISBANK,   name: Axis Bank,               sector: Banking }
+  - { symbol: WIPRO,      name: Wipro,                   sector: IT }
+  - { symbol: HCLTECH,    name: HCL Technologies,        sector: IT }
+  - { symbol: ULTRACEMCO, name: UltraTech Cement,        sector: Cement }
+  - { symbol: TITAN,      name: Titan Company,           sector: Consumer }
+  - { symbol: ASIANPAINT, name: Asian Paints,            sector: Consumer }
+  - { symbol: M&M,        name: Mahindra & Mahindra,     sector: Auto }
+  - { symbol: NTPC,       name: NTPC,                    sector: Power }
+  - { symbol: POWERGRID,  name: Power Grid Corp,         sector: Power }
+  - { symbol: ONGC,       name: ONGC,                    sector: Oil & Gas }
+  - { symbol: TATASTEEL,  name: Tata Steel,              sector: Metals }
+  - { symbol: BAJAJFINSV, name: Bajaj Finserv,           sector: NBFC }
+  - { symbol: BEL,        name: Bharat Electronics,      sector: Defence }
+  - { symbol: ETERNAL,    name: Eternal (Zomato),        sector: Consumer }
+  - { symbol: JSWSTEEL,   name: JSW Steel,               sector: Metals }
+  - { symbol: COALINDIA,  name: Coal India,              sector: Mining }
+  - { symbol: ADANIENT,   name: Adani Enterprises,       sector: Infrastructure }
+  - { symbol: TRENT,      name: Trent,                   sector: Retail }
+  - { symbol: NESTLEIND,  name: Nestle India,            sector: FMCG }
+  - { symbol: GRASIM,     name: Grasim Industries,       sector: Cement }
+  - { symbol: HINDALCO,   name: Hindalco Industries,     sector: Metals }
+  - { symbol: SBILIFE,    name: SBI Life Insurance,      sector: Insurance }
+  - { symbol: HDFCLIFE,   name: HDFC Life Insurance,     sector: Insurance }
+  - { symbol: TECHM,      name: Tech Mahindra,           sector: IT }
+  - { symbol: BAJAJ-AUTO, name: Bajaj Auto,              sector: Auto }
+  - { symbol: EICHERMOT,  name: Eicher Motors,           sector: Auto }
+  - { symbol: SHRIRAMFIN, name: Shriram Finance,         sector: NBFC }
+  - { symbol: CIPLA,      name: Cipla,                   sector: Pharma }
+  - { symbol: DRREDDY,    name: Dr. Reddy's Labs,        sector: Pharma }
+  - { symbol: APOLLOHOSP, name: Apollo Hospitals,        sector: Healthcare }
+  - { symbol: TATACONSUM, name: Tata Consumer Products,  sector: FMCG }
+  - { symbol: JIOFIN,     name: Jio Financial Services,  sector: NBFC }
+  - { symbol: INDIGO,     name: InterGlobe Aviation,     sector: Consumer }
+  - { symbol: MAXHEALTH,  name: Max Healthcare,          sector: Healthcare }
+  - { symbol: TMPV,       name: Tata Motors PV,          sector: Auto }
+  - { symbol: TMCV,       name: Tata Motors CV,          sector: Auto }

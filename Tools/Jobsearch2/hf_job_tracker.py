@@ -97,7 +97,9 @@ USE_SELENIUM = True
 
 # Which regions to scan. Options: {"SG"}, {"HK"}, or {"SG", "HK"}
 # Can be overridden at runtime with --region
-REGION_FILTER = {"SG", "HK"}
+#REGION_FILTER = {"SG", "HK"}
+
+REGION_FILTER = {"SG"}
 
 # Include wound-down funds (Segantii, Ovata) in the scan. Normally False.
 INCLUDE_REFERENCE = False
@@ -273,7 +275,7 @@ FUNDS = [
     # ---------------------------------------------------------------
     {
         "name": "Brevan Howard",
-        "careers_url": "https://wd3.myworkdaysite.com/recruiting/brevanhoward/BH_ExternalCareers",
+        "careers_url": "https://careers.brevanhoward.com/gb/en/c/technology-group-jobs",
         "region": "SG, HK", "category": "Global macro",
         "channel": "scrape", "verified": True,
         "notes": "PRIORITY. Workday board, filter SG/HK. Large SG office at Suntec City. Rates/FX heavy",
